@@ -18,6 +18,9 @@ function Header() {
         <Link to="/desserts">
         <div className="grid-item"> Desserts 🍰 </div>   
         </Link> 
+        <Link to="/mealplan">
+        <div className="grid-item"> Meal Plan 📙 </div>   
+        </Link> 
     </div>
     </div>
   )

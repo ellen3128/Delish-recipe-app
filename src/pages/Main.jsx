@@ -6,6 +6,7 @@ import Dessert from "./Dessert";
 import Healthy from "./Healthy";
 import Recipe from './Recipe';
 import Searched from './Searched';
+import MealPlan from "./MealPlan";
 
 function Main() {
   return (
@@ -17,6 +18,7 @@ function Main() {
         <Route path="/desserts" element={<Dessert />} />
         <Route path='/recipe/:name' element={<Recipe />}/>
         <Route path='/searched/:search' element={<Searched />} /> 
+        <Route path='/mealplan' element={<MealPlan />} /> 
       </Routes>
     
   );
