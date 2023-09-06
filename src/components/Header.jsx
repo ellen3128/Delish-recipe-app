@@ -1,14 +1,23 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Header.css';
 
 function Header() {
   return (
     <div className="header-container">
-    <div class="grid grid-cols-4 gap-4">
-        <div class="grid-item delish"> DELISH </div>    
-        <div class="grid-item"> Home </div>    
-        <div class="grid-item"> Cuisines </div>    
-        <div class="grid-item"> Desserts </div>    
+    <div className="grid grid-cols-4 gap-4">
+        <Link to="/">
+          <div className="grid-item delish"> DELISH </div>    
+        </Link>
+        <Link to="/">
+        <div className="grid-item"> Home </div>    
+        </Link>
+        <Link to="/cuisines">
+        <div className="grid-item"> Cuisines </div>
+        </Link>    
+        <Link to="/desserts">
+        <div className="grid-item"> Desserts </div>   
+        </Link> 
     </div>
     </div>
   )

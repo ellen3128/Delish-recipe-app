@@ -1,25 +1,23 @@
 import React from "react";
 import { useEffect, useState } from "react";
-// Splide = carousel & SplideSlide = each card in carousel
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-// import '@splidejs/react-splide/css';
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import "./Card.css";
 
-export default function Popular() {
-  const [popular, setPopular] = useState([]);
+export default function Vegies() {
+  const [vegies, setVegies] = useState([]);
 
   useEffect(() => {
-    getPopular();
+    getVegies();
   }, []);
 
-  const getPopular = async () => {
-    const check = localStorage.getItem("popular");
+  const getVegies = async () => {
+    const check = localStorage.getItem("vegies");
     // to see if there's data in localStorage
 
     if (check) {
       try {
-        setPopular(JSON.parse(check));
+        setVegies(JSON.parse(check));
       } catch (error) {
         console.error("Error parsing data from localStorage:", error);
         // Handle the error as needed
@@ -27,13 +25,13 @@ export default function Popular() {
     } else {
       // if not, fetch data (overall preventing unnecessary fetching every time)
       const api = await fetch(
-        `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9`
+        `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9&tags=vegetarian`
       );
       const data = await api.json();
       console.log(data);
-      localStorage.setItem("popular", JSON.stringify(data.recipes));
+      localStorage.setItem("vegies", JSON.stringify(data.recipes));
       // in local storage, only strings are saved
-      setPopular(data.recipes);
+      setVegies(data.recipes);
       console.log(data.recipes);
     }
   };
@@ -41,7 +39,7 @@ export default function Popular() {
   return (
     <div>
       <div className="wrapper">
-        <h3>Our Picks</h3>
+        <h3>Vegetarian Picks</h3>
 
         <Splide
           options={{
@@ -52,7 +50,7 @@ export default function Popular() {
             gap: "3rem",
           }}
         >
-          {popular.map((recipe) => {
+          {vegies.map((recipe) => {
             return (
               <SplideSlide key={recipe.id}>
                 <div className="card">
