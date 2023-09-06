@@ -1,10 +1,11 @@
 
-h3 {
+.picks {
     text-align: left;
     margin: 5px;
     text-decoration: none;
     font-weight: 780;
     font-size: 20px;
+    display: block !important;
 }
 
 .wrapper {

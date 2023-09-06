@@ -40,7 +40,7 @@ export default function Vegies() {
   return (
     <div>
       <div className="wrapper">
-        <h3>Vegetarian Picks</h3>
+        <h3 className="picks">Vegetarian Picks</h3>
 
         <Splide
           options={{

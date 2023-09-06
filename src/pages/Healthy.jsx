@@ -21,7 +21,7 @@ export default function Healthy() {
 
   return (
     <div>
-        <h3>Healthy Selections</h3>
+        <h3 className="picks">Healthy Selections</h3>
         <div className="grid-container">
         {healthy.map((recipe) => (
           <div className="card-healthy" key={recipe.id}>

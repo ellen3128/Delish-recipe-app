@@ -12,9 +12,9 @@ h3 {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
-    padding: 3rem;
-    gap: 20px;
-    /* height: 80vh; */
+    padding: 5rem;
+    padding-top: 5rem;
+    gap: 30px;
   }
 
 .img-container {

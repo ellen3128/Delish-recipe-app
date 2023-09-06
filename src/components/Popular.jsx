@@ -42,7 +42,7 @@ export default function Popular() {
   return (
     <div>
       <div className="wrapper">
-        <h3>Our Picks</h3>
+        <div className="picks">Our Picks</div>
 
         <Splide
           options={{
