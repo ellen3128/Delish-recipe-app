@@ -3,6 +3,7 @@ import Popular from '../components/Popular';
 import Veggies from '../components/Veggies';   
 import Banner from '../components/Banner';
 import Category from '../components/Category';
+import Search from '../components/Search';
 
 
 function Home() {
@@ -10,6 +11,7 @@ function Home() {
     <div>
     <Banner />
     <Category />
+    <Search />
     <Popular />
     <Veggies />
     </div>

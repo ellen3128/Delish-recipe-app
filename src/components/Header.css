@@ -9,7 +9,6 @@
 }
 
 
-
 .grid {
   background-color: rgba(28, 27, 27, 0.622);
   display: flex;
@@ -19,6 +18,7 @@
 }
 
 .grid-item {
+  font-size: 1.3rem;
   font-weight: 600;
   color: white;
   padding: 1rem;
