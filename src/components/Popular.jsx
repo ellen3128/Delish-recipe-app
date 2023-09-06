@@ -5,6 +5,7 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 // import '@splidejs/react-splide/css';
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import "./Card.css";
+import { Link } from "react-router-dom";
 
 export default function Popular() {
   const [popular, setPopular] = useState([]);
@@ -56,9 +57,10 @@ export default function Popular() {
             return (
               <SplideSlide key={recipe.id}>
                 <div className="card">
-                  <img src={recipe.image} alt={recipe.title} />
-
-                  <div className="gradient"></div>
+                  <Link to={"/recipe/" + recipe.id}>
+                    <img src={recipe.image} alt={recipe.title} />
+                    <div className="gradient"></div>
+                  </Link>
                 </div>
                 <p>{recipe.title}</p>
               </SplideSlide>

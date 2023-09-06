@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import "./Card.css";
+import { Link } from "react-router-dom";
 
 export default function Vegies() {
   const [vegies, setVegies] = useState([]);
@@ -54,9 +55,10 @@ export default function Vegies() {
             return (
               <SplideSlide key={recipe.id}>
                 <div className="card">
-                  <img src={recipe.image} alt={recipe.title} />
-
+                  <Link to={"/recipe/" + recipe.id}>
+                    <img src={recipe.image} alt={recipe.title} />
                   <div className="gradient"></div>
+                  </Link>
                 </div>
                 <p>{recipe.title}</p>
               </SplideSlide>

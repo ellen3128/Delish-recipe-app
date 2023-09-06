@@ -4,6 +4,7 @@ import Home from "./Home";
 import Cuisine from "../components/Cuisine";
 import Dessert from "./Dessert";
 import Healthy from "./Healthy";
+import Recipe from './Recipe';
 
 function Main() {
   return (
@@ -13,6 +14,7 @@ function Main() {
         <Route path='/cuisines/:type' element={<Cuisine />} />  
         <Route path='/healthy' element={<Healthy />} />
         <Route path="/desserts" element={<Dessert />} />
+        <Route path='/recipe/:name' element={<Recipe />}/>
       </Routes>
     
   );

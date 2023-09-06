@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Healthy.css";
+import { Link } from 'react-router-dom';
 
 export default function Healthy() {
   const [healthy, setHealthy] = useState([]);
@@ -25,7 +26,9 @@ export default function Healthy() {
         {healthy.map((recipe) => (
           <div className="card-healthy" key={recipe.id}>
             <div className="img-container">
+            <Link to={'/recipe/' + recipe.id}>
               <img src={recipe.image} alt={recipe.title} />
+              </Link>
             </div>
             <h4>{recipe.title}</h4>
             </div>
