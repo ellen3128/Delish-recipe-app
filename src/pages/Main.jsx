@@ -4,7 +4,7 @@ import Home from "./Home";
 import Cuisine from "./Cuisine";
 import Dessert from "./Dessert";
 
-function pages() {
+function Main() {
   return (
     
       <Routes>
@@ -16,4 +16,4 @@ function pages() {
   );
 }
 
-export default pages;
+export default Main;

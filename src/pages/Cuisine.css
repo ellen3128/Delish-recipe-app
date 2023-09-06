@@ -1,0 +1,36 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 3rem;
+}
+
+.card-cuisine {
+    min-height: 20rem;
+    /* border-radius: 2rem; */
+    overflow: hidden;
+    position: relative;
+}
+.img-container {
+    height: 230px;
+    overflow: hidden;
+    border-radius: 30px;
+    
+    
+}
+.card-cuisine img {
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem !important;
+    transform: scale(1.2);
+    object-fit: cover;
+    filter: contrast(120%) saturate(120%) brightness(110%);
+}
+
+.card-cuisine h4 {
+    text-align: center;
+    padding: 1rem;
+}
+.card-cuisine a {
+    text-decoration: none;
+}

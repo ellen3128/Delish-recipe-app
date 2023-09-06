@@ -1,3 +1,15 @@
+@font-face {
+  font-family: 'Cabinest';
+  src: url('../../public/font/Cabinest.otf') format('opentype');  
+}
+
+@font-face {
+  font-family: 'Marlino';
+  src: url('../../public/font/Marlino.otf') format('opentype');  
+}
+
+
+
 .grid {
   background-color: rgba(28, 27, 27, 0.622);
   display: flex;
@@ -17,6 +29,7 @@
 }
 
 .delish {
+    font-family: Marlino;
     text-align: left !important;
     margin-left: 0px;
     letter-spacing: 8px;

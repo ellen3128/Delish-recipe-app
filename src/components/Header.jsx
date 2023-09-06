@@ -12,7 +12,7 @@ function Header() {
         <Link to="/">
         <div className="grid-item"> Home </div>    
         </Link>
-        <Link to="/cuisines">
+        <Link to="/cuisines/">
         <div className="grid-item"> Cuisines </div>
         </Link>    
         <Link to="/desserts">
