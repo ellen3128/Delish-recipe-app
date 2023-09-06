@@ -12,11 +12,11 @@ function Header() {
         <Link to="/">
         <div className="grid-item"> Home </div>    
         </Link>
-        <Link to="/cuisines/">
-        <div className="grid-item"> Cuisines </div>
+        <Link to="/healthy/">
+        <div className="grid-item"> Healthy 🥬 </div>
         </Link>    
         <Link to="/desserts">
-        <div className="grid-item"> Desserts </div>   
+        <div className="grid-item"> Desserts 🍰 </div>   
         </Link> 
     </div>
     </div>
