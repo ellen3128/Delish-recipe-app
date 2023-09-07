@@ -7,12 +7,14 @@ import Healthy from "./Healthy";
 import Recipe from './Recipe';
 import Searched from './Searched';
 import MealPlan from "./MealPlan";
+import Profile from '../pages/Profile/profile';
 
 function Main() {
   return (
     
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/profile" element={<Profile/>}/>
         <Route path='/cuisines/:type' element={<Cuisine />} />  
         <Route path='/healthy' element={<Healthy />} />
         <Route path="/desserts" element={<Dessert />} />

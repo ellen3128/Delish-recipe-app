@@ -33,10 +33,13 @@ function MealPlan() {
         placeholder="Maximum Daily Calories (e.g. 2000)"
         onChange={handleChange}
         />
-    </div>
-    <button className="mealplan-button" onClick={getMealData}>Get Daily Meal Plan</button>
+
+    </section>
+    <button className="mealPlanbtn" onClick={getMealData}>Get Daily Meal Plan</button>
+
     {mealData && <MealList mealData={mealData} />}
     </div>
+    
   )
 }
 
