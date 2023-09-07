@@ -32,6 +32,7 @@ export default function Healthy() {
             </div>
             <h4>{recipe.title}</h4>
             </div>
+
         ))}
       </div>
       </div>
