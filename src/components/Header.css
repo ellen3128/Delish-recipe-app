@@ -23,7 +23,7 @@
   color: white;
   padding: 1rem;
   display: inline-block;
-  margin: 10px;
+  /* margin: 5px; */
   border-radius: 0.5rem;
   transition: transform 0.2s ease-in-out;
 }
