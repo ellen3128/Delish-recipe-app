@@ -26,7 +26,6 @@ function MealPlan() {
     }
 
     return (
-
         <div className="input-field">
     <section className="controls">
         <input 
