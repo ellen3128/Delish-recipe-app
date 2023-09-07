@@ -26,6 +26,7 @@ function MealPlan() {
     }
 
     return (
+
         <div className="input-field">
     <section className="controls">
         <input 
@@ -34,9 +35,10 @@ function MealPlan() {
         onChange={handleChange}
         />
     </section>
-    <button onClick={getMealData}>Get Daily Meal Plan</button>
+    <button className="mealPlanbtn" onClick={getMealData}>Get Daily Meal Plan</button>
     {mealData && <MealList mealData={mealData} />}
     </div>
+    
   )
 }
 

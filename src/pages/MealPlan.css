@@ -1,0 +1,59 @@
+.input-field {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section {
+    margin: 2rem 0 1rem 0;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+input {
+    text-align: center;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.mealPlanbtn {
+    padding: 0.5rem 1rem;
+    background-color: rgb(138, 163, 138);
+    color: white;
+    border: none;
+}
+
+.mealPlanbtn:hover {
+    cursor: pointer;
+    background-color:rgb(97, 120, 97);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.macros {
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.nutrients ul {
+    display: flex;
+    width: 35rem;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+}
+
+ul {
+    list-style: none;
+    font-weight: 600;
+}
+
