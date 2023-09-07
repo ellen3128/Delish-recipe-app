@@ -13,13 +13,13 @@ function Header() {
         <div className="grid-item"> Home </div>    
         </Link>
         <Link to="/healthy/">
-        <div className="grid-item"> Healthy 🥬 </div>
+        <div className="grid-item"> Healthy </div>
         </Link>    
         <Link to="/desserts">
-        <div className="grid-item"> Desserts 🍰 </div>   
+        <div className="grid-item"> Desserts </div>   
         </Link> 
         <Link to="/mealplan">
-        <div className="grid-item"> Meal Plan 📙 </div>   
+        <div className="grid-item"> Meal Plan </div>   
         </Link> 
     </div>
     </div>

@@ -26,15 +26,15 @@ function MealPlan() {
     }
 
     return (
-        <div className="input-field">
-    <section className="controls">
-        <input 
+        <div className="mealplan-container">
+    <div>
+        <input className="controls"
         type="number"
-        placeholder="Calories (e.g. 2000)"
+        placeholder="Maximum Daily Calories (e.g. 2000)"
         onChange={handleChange}
         />
-    </section>
-    <button onClick={getMealData}>Get Daily Meal Plan</button>
+    </div>
+    <button className="mealplan-button" onClick={getMealData}>Get Daily Meal Plan</button>
     {mealData && <MealList mealData={mealData} />}
     </div>
   )
