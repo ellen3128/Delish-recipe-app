@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Category from './Category/Category';
+import Category from './Category';
 import { Link } from 'react-router-dom';
 import './Cuisine.css';
 
@@ -10,7 +10,7 @@ function Cuisine() {
   
   const getCuisine = async (name) => {
   const data = await fetch(
-    `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&cuisine=${name}`
+    `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&number=12&cuisine=${name}`
   );
 
   const recipes = await data.json();
@@ -25,6 +25,7 @@ useEffect(() => {
   return (
     <div>
       <Category />
+      <div className="grid-container">
       {cuisine.map((item) => (
         <div className="card-cuisine" key={item.id}>
           <div className="img-container">
@@ -35,6 +36,7 @@ useEffect(() => {
           </div>
         </div>
       ))}
+    </div>
     </div>
   );
 }

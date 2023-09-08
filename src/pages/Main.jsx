@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./Home";
-import Cuisine from "../components/Cuisine";
+import Cuisine from "../components/Category/Cuisine";
 import Dessert from "./Dessert";
 import Healthy from "./Healthy";
 import Recipe from './Recipe';
