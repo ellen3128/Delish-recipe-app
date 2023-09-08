@@ -3,7 +3,7 @@ import Popular from '../components/OurPicks/Popular';
 import Veggies from '../components/OurPicks/Veggies';   
 import Banner from '../components/Header/Banner';
 import Category from '../components/Category/Category';
-import Search from '../components/Search';
+import Search from '../components/Search/Search';
 
 
 function Home() {

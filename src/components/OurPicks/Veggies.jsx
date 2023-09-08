@@ -43,27 +43,29 @@ export default function Vegies() {
   return (
     <div>
       <div className="wrapper">
-        <h3 className="picks">Vegetarian Picks</h3>
+        <div className="topic">
+        <h3 className="picks">Veggie Picks</h3>
+        </div>
 
-        <Splide
-          options={{
-            fixedWidth: "15rem",
+        <Splide options={{
+            fixedWidth: '270px',
+            fixedHeight: '400px',
             arrows: false,
             pagination: false,
-            drag: "free",
-            gap: "3rem",
+            drag: 'free',
+            gap: '5rem',
+            width: '90vw'
           }}
         >
           {vegies.map((recipe) => {
             return (
               <SplideSlide key={recipe.id}>
-                <div className="card">
+                <div className="random-card">
                   <Link to={"/recipe/" + recipe.id}>
                     <img src={recipe.image} alt={recipe.title} />
-                    <div className="gradient"></div>
                   </Link>
                 </div>
-                <p>{recipe.title}</p>
+                <p className="random-title">{recipe.title}</p>
               </SplideSlide>
             );
           })}

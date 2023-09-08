@@ -37,20 +37,24 @@ export default function Popular() {
     );
     const data = await api.json();
     localStorage.setItem("popular", JSON.stringify(data.recipes));
-    setPopular(data.recipes);
+    setPopular(data.recipes)
   };
 
   return (
     <div>
       <div className="wrapper">
-        <h3>Our Picks</h3> 
+      <div className="topic">
+        <h3 className="picks">Our Picks</h3> 
+        </div>
 
         <Splide options={{
-            perPage: 4,
+            fixedWidth: '270px',
+            fixedHeight: '400px',
             arrows: false,
             pagination: false,
             drag: 'free',
-            gap: '2rem'
+            gap: '5rem',
+            width: '90vw'
           }}
         >
           {popular.map((recipe) => {
@@ -59,10 +63,9 @@ export default function Popular() {
                 <div className="random-card">
                   <Link to={"/recipe/" + recipe.id}>
                     <img src={recipe.image} alt={recipe.title} />
-                    <div className="gradient"></div>
                   </Link>
                 </div>
-                <p>{recipe.title}</p>
+                <p className="random-title">{recipe.title}</p>
               </SplideSlide>
             );
           })}
