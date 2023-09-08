@@ -4,9 +4,9 @@ import Home from "./Home";
 import Cuisine from "../components/Category/Cuisine";
 import Dessert from "./HealthyDessert/Dessert";
 import Healthy from "./HealthyDessert/Healthy";
-import Recipe from './Recipe';
-import Searched from './Searched';
-import MealPlan from "./MealPlan";
+import Recipe from './Recipe/Recipe';
+import Searched from './Recipe/Searched';
+import MealPlan from "./Mealplan/MealPlan";
 import Profile from '../pages/Profile/profile';
 
 function Main() {
