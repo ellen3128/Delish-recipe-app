@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Category from '../components/Category';
+import Category from './Category/Category';
 import { Link } from 'react-router-dom';
 import './Cuisine.css';
 
