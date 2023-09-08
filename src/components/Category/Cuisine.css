@@ -17,6 +17,7 @@
     position: relative;
     zoom:0.55;
     object-fit: cover;
+    border-radius: 3rem;
     filter: contrast(120%) saturate(105%) brightness(110%);
 }
 
