@@ -86,7 +86,7 @@ const getVegan = async () => {
 
   return (
     <div>
-      <h3 className="picks">Healthy Selections</h3>
+      {/* <h3 className="picks">Healthy Selections</h3> */}
 
       <h4 className="classification">Ketogenic</h4>
       <div className="grid-container">
@@ -97,7 +97,7 @@ const getVegan = async () => {
                 <img src={recipe.image} alt={recipe.title} />
               </Link>
             </div>
-            <h4>{recipe.title}</h4>
+            <h4 className="recipeName">{recipe.title}</h4>
           </div>
         ))}
       </div>
@@ -111,7 +111,7 @@ const getVegan = async () => {
                 <img src={recipe.image} alt={recipe.title} />
               </Link>
             </div>
-            <h4>{recipe.title}</h4>
+            <h4 className="recipeName">{recipe.title}</h4>
           </div>
         ))}
       </div>
@@ -125,7 +125,7 @@ const getVegan = async () => {
                 <img src={recipe.image} alt={recipe.title} />
               </Link>
             </div>
-            <h4>{recipe.title}</h4>
+            <h4 className="recipeName">{recipe.title}</h4>
           </div>
         ))}
       </div>

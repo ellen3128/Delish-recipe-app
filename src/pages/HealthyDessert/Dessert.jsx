@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-// import "./Healthy.css";
+import "./Healthy.css";
 import { Link } from 'react-router-dom';
 
 export default function Desserts() {
@@ -21,16 +21,16 @@ export default function Desserts() {
 
   return (
     <div>
-        <h3 className="picks">Sweet Selections</h3>
+        <h4 className="classification">Sweet Selections</h4>
         <div className="grid-container">
         {dessert.map((recipe) => (
-          <div className="card-dessert" key={recipe.id}>
+          <div className="card-healthy" key={recipe.id}>
             <div className="img-container">
             <Link to={'/recipe/' + recipe.id}>
               <img src={recipe.image} alt={recipe.title} />
               </Link>
             </div>
-            <h4>{recipe.title}</h4>
+            <h4 className="recipeName">{recipe.title}</h4>
             </div>
         ))}
       </div>
