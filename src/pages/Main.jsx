@@ -1,12 +1,12 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./Home";
-import Cuisine from "../components/Cuisine";
-import Dessert from "./Dessert";
-import Healthy from "./Healthy";
-import Recipe from './Recipe';
-import Searched from './Searched';
-import MealPlan from "./MealPlan";
+import Cuisine from "../components/Category/Cuisine";
+import Dessert from "./HealthyDessert/Dessert";
+import Healthy from "./HealthyDessert/Healthy";
+import Recipe from './Recipe/Recipe';
+import Searched from './Recipe/Searched';
+import MealPlan from "./Mealplan/MealPlan";
 import Profile from '../pages/Profile/profile';
 
 function Main() {

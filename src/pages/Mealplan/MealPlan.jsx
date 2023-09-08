@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
-import MealList from "../components/MealList";
+import MealList from "../../components/Mealplan/MealList";
 import './MealPlan.css';
 
 function MealPlan() {
@@ -30,12 +30,14 @@ function MealPlan() {
     <section className="controls">
         <input 
         type="number"
-        placeholder="Calories (e.g. 2000)"
+        placeholder="Input daily caloric intake (ex.2000)"
         onChange={handleChange}
         />
     </section>
     <button className="mealPlanbtn" onClick={getMealData}>Get Daily Meal Plan</button>
+    <div className="meal">
     {mealData && <MealList mealData={mealData} />}
+    </div>
     </div>
     
   )

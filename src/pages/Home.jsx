@@ -1,9 +1,9 @@
 import React from 'react'
-import Popular from '../components/Popular'; 
-import Veggies from '../components/Veggies';   
-import Banner from '../components/Banner';
-import Category from '../components/Category';
-import Search from '../components/Search';
+import Popular from '../components/OurPicks/Popular'; 
+import Veggies from '../components/OurPicks/Veggies';   
+import Banner from '../components/Header/Banner';
+import Category from '../components/Category/Category';
+import Search from '../components/Search/Search';
 
 
 function Home() {

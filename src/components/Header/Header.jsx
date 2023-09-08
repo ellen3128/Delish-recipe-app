@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 import {useAuth0} from '@auth0/auth0-react' 
-import LoginButton from "./Auth/LoginButton";
-import LogoutButton from "./Auth/LogoutButton";
+import LoginButton from "../Auth/LoginButton";
+import LogoutButton from "../Auth/LogoutButton";
 
 function Header() {
   const { isLoading, isAuthenticated,  user } = useAuth0();

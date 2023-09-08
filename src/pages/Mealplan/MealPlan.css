@@ -1,0 +1,118 @@
+.input-field {
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+input {
+    text-align: center;
+    margin-bottom: 1rem;
+    border: none;
+    background: linear-gradient(35deg, #494949, #313131);
+    font-size: 1.2rem;
+    color: white;
+    padding: 0.5rem 3rem;
+    border-radius: 1rem;
+    outline: none;
+    width: 150%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.mealPlanbtn {
+    padding: 0.5rem 1rem;
+    background-color: rgb(138, 163, 138);
+    color: white;
+    border: none;
+}
+
+.mealPlanbtn:hover {
+    cursor: pointer;
+    background-color:rgb(97, 120, 97);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.macros ul {
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.macros {
+    color: white;
+}
+
+.nutrients ul {
+    display: flex;
+    width: 35rem;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+}
+
+ul {
+    list-style: none;
+    font-weight: 600;
+}
+
+.instructions {
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+.meals {
+    display: flex;
+    width: 30rem;
+    justify-content: space-evenly; 
+    padding-left: 0 2rem;
+}
+
+article {
+    border: 2px solid rgb(83, 83, 83);
+    margin: 1rem;
+}
+
+article h1 {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    margin-left: 1rem;
+}
+
+article a {
+    margin: 2rem auto;
+    margin-top: 2rem;
+    font-weight: 800;
+    background-color: aqua;
+    padding: 1rem;
+}
+
+.mealImg {
+    width: 100px;
+    height: 400px;
+    padding: 1rem;
+}
+
+.instructions li {
+    margin: 0 auto !important;
+}
