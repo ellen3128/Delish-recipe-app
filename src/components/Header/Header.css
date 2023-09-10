@@ -14,7 +14,8 @@
 }
 
 .grid {
-  background-color: rgba(28, 27, 27, 0.622);
+  /* background-color: rgb(76, 106, 32); */
+  background: linear-gradient(to right, rgb(28, 72, 51), rgb(25, 129, 59));
   display: flex;
   justify-content: space-evenly;
   align-items: center;

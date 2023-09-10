@@ -18,7 +18,12 @@
     zoom:0.55;
     object-fit: cover;
     border-radius: 3rem;
-    filter: contrast(120%) saturate(105%) brightness(110%);
+    filter: grayscale(100%);
+    /* filter: contrast(120%) saturate(105%) brightness(110%); */
+}
+
+.card-cuisine img:hover {
+    filter: none;
 }
 
 .card-cuisine {

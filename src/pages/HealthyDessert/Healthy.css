@@ -42,6 +42,11 @@ h4 {
         grid-template-columns: repeat(4, 1fr);
     }
 } */
+/* 
+
+* {
+    background-color: aquamarine;
+} */
 
 .card-healthy {
     margin: 0 auto;
@@ -64,7 +69,12 @@ h4 {
       border-radius: 25rem;
       height: 28rem;
       margin-bottom: 2.5rem;
-      filter: contrast(120%) saturate(105%) brightness(110%);
+      /* filter: grayscale(100%); */
+      filter: (120%) saturate(105%) brightness(110%);
+  }
+
+  .card-healthy img:hover {
+    zoom: 0.56;
   }
   
   .card-healthy {
@@ -75,7 +85,12 @@ h4 {
   .card-dessert {
     padding: 0;
     width: 80%;
+    filter: grayscale(100%);
   }
+
+.card-dessert:hover {
+    filter: none;
+}
 
   .classification {
     font-weight: 800;

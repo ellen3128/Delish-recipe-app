@@ -44,7 +44,7 @@ export default function Popular() {
     <div>
       <div className="wrapper">
       <div className="topic">
-        <h3 className="picks">Our Picks</h3> 
+        <h3 className="picks1">Our Picks</h3> 
         </div>
 
         <Splide options={{
