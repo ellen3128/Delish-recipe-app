@@ -33,7 +33,7 @@ function Header() {
             {/* login button if not authenticated  */}
             {isAuthenticated ? (
               <>
-                <Link to="/profile">User Profile</Link> <LogoutButton />
+                <Link to="/profile"> <span className="username"> {user.given_name}'s Account </span> </Link> <LogoutButton />
               </>
             ) : (
               <LoginButton />

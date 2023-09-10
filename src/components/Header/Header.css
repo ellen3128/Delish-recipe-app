@@ -98,3 +98,9 @@
   line-height: 30px !important;
 }
 
+.username {
+  color: white;
+  margin-right: 5px;
+  font-weight: 500;
+  color: #E6FF55;
+}
