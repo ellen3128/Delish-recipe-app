@@ -43,10 +43,10 @@ export default function Popular() {
   return (
     <div>
       <div className="wrapper">
-      <div className="topic">
-        <h3 className="picks1">Our Picks</h3> 
+      <div className="grid-rows-1 topic">
+        <h3 className="picks1">Our Picks</h3>
         </div>
-
+        <div className="grid-rows-1">
         <Splide options={{
             fixedWidth: '270px',
             fixedHeight: '400px',
@@ -70,6 +70,7 @@ export default function Popular() {
             );
           })}
         </Splide>
+        </div>
       </div>
     </div>
   );

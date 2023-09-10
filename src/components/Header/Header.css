@@ -13,6 +13,23 @@
   src: url("../../../public/font/Chocolates.otf") format("opentype");
 }
 
+@font-face {
+  font-family: "Rosehot";
+  src: url("../../../public/font/Rosehot.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "Mollen";
+  src: url("../../../public/font/Mollen.otf") format("opentype");
+}
+
+
+@font-face {
+  font-family: "MonoSpatial";
+  src: url("../../../public/font/MonoSpatial.ttf") format("opentype");
+}
+
+
 .grid {
   /* background-color: rgb(76, 106, 32); */
   background: linear-gradient(to right, rgb(28, 72, 51), rgb(25, 129, 59));
@@ -20,6 +37,11 @@
   justify-content: space-evenly;
   align-items: center;
   gap: 8rem;
+  overflow: hidden;
+}
+
+.grid img {
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
 }
 
 .grid-item {
@@ -32,11 +54,11 @@
 }
 
 .delish {
-  font-family: Marlino;
+  font-family: MonoSpatial;
   text-align: left !important;
   margin-left: 0px;
-  letter-spacing: 8px;
-  font-size: 1.5rem;
+  letter-spacing: 7px;
+  font-size: 2rem;
   font-weight: 800;
 }
 
@@ -45,7 +67,7 @@
 }
 
 .text {
-  font-family: Chocolates;
+  font-family: MonoSpatial;
   padding: 0;
   margin-left: -100px;
   width: 400px;
@@ -55,6 +77,7 @@
   letter-spacing: 2px;
   line-height: 200%;
   color: white;
+  margin-top: -80px;
 }
 
 span {
@@ -62,3 +85,4 @@ span {
   color: rgb(255, 255, 0);
   font-size: 25px;
 }
+
