@@ -21,7 +21,7 @@ export default function Desserts() {
 
   return (
     <div>
-        <h4 className="classification">Sweet Selections</h4>
+        <h4 className="classification">Sweet Recipes</h4>
         <div className="grid-container">
         {dessert.map((recipe) => (
           <div className="card-healthy" key={recipe.id}>

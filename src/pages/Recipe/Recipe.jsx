@@ -36,7 +36,7 @@ function Recipe() {
   }
 
   return (
-    <div className="wrapper">
+    <div className="recipe-wrapper">
       <div className="image-container">
         <h2>{details.title}</h2>
         <img src={details.image} alt="" />

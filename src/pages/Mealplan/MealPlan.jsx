@@ -3,6 +3,7 @@ import { useState } from 'react';
 import MealList from "../../components/Mealplan/MealList";
 import './MealPlan.css';
 
+
 function MealPlan() {
     const [mealData, setMealData] = useState(null);
     const [calories, setCalories] = useState(2000);

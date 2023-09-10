@@ -1,6 +1,6 @@
 .card-cuisine {
   margin: 0 auto;
-  padding: 2rem;
+  /* padding: 4rem; */
   /* display: flex; */
 }
 
@@ -8,17 +8,25 @@
   display: grid;
   /* grid-template-columns: repeat(4, 1fr); */
   grid-template-columns: 1fr;
-  max-width: 90%;
+  max-width: 80%;
   margin: 0 auto;
-  padding: 0;
 }
 
 .card-cuisine img {
     position: relative;
+    width: 280px !important;
+    height: 350px !important;
     zoom:0.55;
     object-fit: cover;
     border-radius: 3rem;
-    filter: contrast(120%) saturate(105%) brightness(110%);
+
+    /* filter: contrast(105%) saturate(105%) brightness(105%); */
+    /* filter: grayscale(100%); */
+    /* filter: contrast(120%) saturate(105%) brightness(110%); */
+}
+
+.card-cuisine img:hover {
+    zoom: 0.56;
 }
 
 .card-cuisine {
@@ -26,13 +34,8 @@
   width: 80%;
 }
 
-/* Default for Mobile */
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    max-width: 90%; 
-    margin: 0 auto;
-    padding: 0;
+.cuisineName {
+    margin-bottom: 1rem;
 }
 
 /* Tablets: 2 columns */

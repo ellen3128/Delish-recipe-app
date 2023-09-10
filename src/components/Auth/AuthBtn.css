@@ -1,0 +1,54 @@
+
+.authBtn {
+    display: inline-block;
+    position: relative;
+    margin: 0 auto;
+    z-index: 1;
+    overflow: hidden; 
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: 800;
+    font-size: 1em;
+    padding: 0.5em 1em;
+    color: #003a32;
+    border: 0.15em solid #00473D;
+    border-radius: calc(0.75em + 0.5em + 0.15em);
+    transition: 2s;
+}
+
+.authBtn:before,
+.authBtn:after {
+    content: '';
+    position: absolute;
+    top: -1.5em;
+    z-index: -1;
+    width: 200%;
+    aspect-ratio: 1;
+    border: none; 
+    border-radius: 40%;
+    background-color: #00473D; 
+    transition: 2s;
+}
+
+.authBtn:before {
+    left: -80%;
+    transform: translate3d(0, 5em, 0) rotate(-340deg);
+}
+
+.authBtn:after {
+    right: -80%;
+    transform: translate3d(0, 5em, 0) rotate(390deg);
+}
+
+.authBtn:hover,
+.authBtn:focus {
+    color: #00473D; 
+}
+
+.authBtn:hover:before,
+.authBtn:hover:after,
+.authBtn:focus:before,
+.authBtn:focus:after {
+    transform: none;
+    background-color: #e8ff65; 
+}
