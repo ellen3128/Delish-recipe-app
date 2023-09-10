@@ -36,7 +36,8 @@
   }
   
   .slink.active {
-    background: linear-gradient(to right, #ffb689, #e94057);
+    background: linear-gradient(to bottom, #00473D, #006457);
+    border:none;
     color: white;
   }
   
