@@ -1,0 +1,10 @@
+.container-user {
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.userpic {
+    border-radius: 50%;
+    width: 170px !important;
+    height: 170px;
+}
