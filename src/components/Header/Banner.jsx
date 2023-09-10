@@ -6,9 +6,11 @@ function Banner() {
   return (
     <div className="grid grid-cols-2">
         <img src={bannerImage} alt="ingredientsImg"></img>
-        <div className="text"> <span>DELISH</span> seeks to help everyday cook looking for the <span>perfect</span> recipe every time. Seek a well-balanced meal that is both healthy and delicious!</div>
+        <div className="text"> <p>A DELISH life <br/> begins here.</p> <br>
+        </br> <p className="subtext"> Find a well-balanced meal that is both healthy and delicious!</p> </div>
     </div>
   )
 }
 
 export default Banner
+

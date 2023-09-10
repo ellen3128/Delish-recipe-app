@@ -1,6 +1,7 @@
 
 import { Auth0Provider } from '@auth0/auth0-react';
 import { useNavigate } from "react-router";
+import './AuthBtn.css';
 
 export default function Auth0ProviderwithNav({children}) {
 	const navigate = useNavigate()
