@@ -2,18 +2,18 @@
 .authBtn {
     display: inline-block;
     position: relative;
+    margin: 0 auto;
     z-index: 1;
     overflow: hidden; 
     text-decoration: none;
     font-family: sans-serif;
-    font-weight: 600;
+    font-weight: 800;
     font-size: 1em;
     padding: 0.5em 1em;
-    color: blue;
-    border: 0.15em solid blue;
+    color: #003a32;
+    border: 0.15em solid #00473D;
     border-radius: calc(0.75em + 0.5em + 0.15em);
     transition: 2s;
-    margin-top: 1em;
 }
 
 .authBtn:before,
@@ -26,8 +26,8 @@
     aspect-ratio: 1;
     border: none; 
     border-radius: 40%;
-    background-color: rgba(0, 0, 255, 0.25); 
-    transition: 4s;
+    background-color: #00473D; 
+    transition: 2s;
 }
 
 .authBtn:before {
@@ -42,7 +42,7 @@
 
 .authBtn:hover,
 .authBtn:focus {
-    color: white; 
+    color: #00473D; 
 }
 
 .authBtn:hover:before,
@@ -50,5 +50,5 @@
 .authBtn:focus:before,
 .authBtn:focus:after {
     transform: none;
-    background-color: rgba(0, 0, 255, 0.75); 
+    background-color: #e8ff65; 
 }
