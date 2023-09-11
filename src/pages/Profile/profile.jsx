@@ -7,26 +7,31 @@ import "./Profile.css";
 export default function Profile () {
   const { user, isAuthenticated, isLoading } = useAuth0();
   const [favoriteDesserts, setFavoriteDesserts] = useState([]);
+  const [favoriteHealthy, setFavoriteHealthy] = useState([]);
+const [favoriteRecipes, setFavoriteRecipes] = useState([]);
 
-  useEffect(() => {
-    const storedFavorites = JSON.parse(localStorage.getItem('favoriteDesserts') || '[]');
+useEffect(() => {
+  const fetchFavorites = async (key, setter) => {
+    const storedFavorites = JSON.parse(localStorage.getItem(key) || '[]');  // Corrected this line
 
     if (storedFavorites.length) {
-      const fetchFavorites = async () => {
-        try {
-          const api = await fetch(
-            `https://api.spoonacular.com/recipes/informationBulk?apiKey=${process.env.REACT_APP_API_KEY}&ids=${storedFavorites.join(',')}`
-          );
-          const data = await api.json();
-          setFavoriteDesserts(data);
-        } catch (error) {
-          console.error("Error fetching favorite dessert details:", error);
-        }
-      };
-      
-      fetchFavorites();
+      try {
+        const api = await fetch(
+          `https://api.spoonacular.com/recipes/informationBulk?apiKey=${process.env.REACT_APP_API_KEY}&ids=${storedFavorites.join(',')}`
+        );
+        const data = await api.json();
+        setter(data);
+      } catch (error) {
+        console.error("Error fetching favorite dessert details:", error);
+      }
     }
-  }, []);
+  };
+  
+  fetchFavorites('favoriteDesserts', setFavoriteDesserts);
+  fetchFavorites('favoriteHealthy', setFavoriteHealthy);
+  fetchFavorites('favoriteRecipes', setFavoriteRecipes);
+  
+}, []);
 
 
   // If user is not authenticated, redirect to home route
@@ -50,23 +55,30 @@ export default function Profile () {
         <span style={{ color: "#00473D", fontWeight: "800" }}>{user.name}</span>
       </h2>
       <p className="userEmail">{user.email}</p>
-      {/* You can add more user details here, such as user.email, user.picture, etc. */}
-    
-      {favoriteDesserts.length > 0 && (
-        <div>
-          <h3>Your Favorite Desserts:</h3>
-          <ul>
-            {favoriteDesserts.map(dessert => (
-              <li key={dessert.id}>
-                {dessert.title}
-                <Link to={`/recipe/${dessert.id}`}>{dessert.title}</Link>
-                </li>
-            ))}
-          </ul>
-        </div>
-      )}
+ 
+      {renderFavorites("Favorite Desserts:", favoriteDesserts)}
+    {renderFavorites("Favorite Healthy Recipes:", favoriteHealthy)}
+    {renderFavorites("Favorite Recipes:", favoriteRecipes)}
     </div>
-  );
+);
+
+function renderFavorites(title, items) {
+  if (items.length > 0) {
+    return (
+      <div>
+        <h3>{title}</h3>
+        <ul>
+          {items.map(item => (
+            <li key={item.id}>
+              <Link to={`/recipe/${item.id}`}>{item.title}</Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  }
+  return null;
+}
 };
 
 
