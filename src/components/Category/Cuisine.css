@@ -12,10 +12,10 @@
   margin: 0 auto;
 }
 
-.card-cuisine img {
+.cuisine-image {
     position: relative;
-    width: 280px !important;
-    height: 350px !important;
+    width: 60rem !important;
+    height: 23rem !important;
     zoom:0.55;
     object-fit: cover;
     border-radius: 3rem;

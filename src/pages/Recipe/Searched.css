@@ -22,18 +22,18 @@
     
   }
 
-  .card-searched img {
+  .searchedImg {
     position: relative;
     zoom: 0.55;
     object-fit: cover;
     border-radius: 25rem;
-    height: 28rem;
+    height: 25rem;
     margin-bottom: 2.5rem;
     /* filter: grayscale(100%); */
     /* filter: contrast(100%) saturate(100%) brightness(105%); */
   }
   
-  .card-searched img:hover {
+  .searchedImg:hover {
     zoom: 0.56;
   }
   

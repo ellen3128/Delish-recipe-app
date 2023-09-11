@@ -44,7 +44,7 @@ export default function Desserts() {
           <div className="card-healthy" key={recipe.id}>
             <div className="img-container">
             <Link to={'/recipe/' + recipe.id}>
-              <img src={recipe.image} alt={recipe.title} />
+              <img className="healthy-image" src={recipe.image} alt={recipe.title} />
               </Link>
 
               <button 

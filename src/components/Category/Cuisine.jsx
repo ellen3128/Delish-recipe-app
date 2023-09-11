@@ -30,7 +30,7 @@ useEffect(() => {
         <div className="card-cuisine" key={item.id}>
           <div className="img-container">
            <Link to={"/recipe/" + item.id}>
-            <img src={item.image} alt={item.title} />
+            <img className="cuisine-image" src={item.image} alt={item.title} />
             <h4 className="cuisineName">{item.title}</h4>
             </Link>
           </div>

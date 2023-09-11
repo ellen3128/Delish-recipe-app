@@ -40,7 +40,7 @@ function Searched() {
                     <div className="card-searched" key={item.id}>
                         <Link to={'/recipe/' + item.id}>
                         <div className="img-container">
-                            <img src={item.image} alt="" />
+                            <img className="searchedImg" src={item.image} alt="" />
                         </div>
                         <h4 className="recipeName">{item.title}</h4>
                         </Link>
