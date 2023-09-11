@@ -1,15 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./Healthy.css";
 import { Link } from 'react-router-dom';
-import { FaRegHeart } from 'react-icons/fa'; // Regular (empty) heart
-import { FaHeart } from 'react-icons/fa';    // Solid heart
 
 
 export default function Desserts() {
   const [dessert, setDessert] = useState([]);
-  const [favorites, setFavorites] = useState(
-    JSON.parse(localStorage.getItem('favoriteDesserts') || '[]')
-  );
 
   useEffect(() => {
     getDessert();
@@ -25,19 +20,7 @@ export default function Desserts() {
       setDessert(data.recipes || []);
   };
 
-  const toggleFavorite = (recipeId) => {
-    const isFavorite = favorites.includes(recipeId);
-    let newFavorites;
-
-    if (isFavorite) {
-      newFavorites = favorites.filter(id => id !== recipeId);
-    } else {
-      newFavorites = [...favorites, recipeId];
-    }
-    // console.log(newFavorites);
-    localStorage.setItem('favoriteDesserts', JSON.stringify(newFavorites));
-    setFavorites(newFavorites);
-  };
+ 
 
   return (
     <div>
@@ -50,12 +33,7 @@ export default function Desserts() {
               <img className="healthy-image" src={recipe.image} alt={recipe.title} />
               </Link>
 
-              {
-                 favorites.includes(recipe.id) ? 
-                 <FaHeart className="favorited" onClick={() => toggleFavorite(recipe.id)} /> 
-                 : 
-                 <FaRegHeart onClick={() => toggleFavorite(recipe.id)} />
-              }
+             
             </div>
             <h4 className="recipeName">{recipe.title}</h4>
             </div>

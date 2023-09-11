@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./Recipe.css";
-import { FaRegHeart } from 'react-icons/fa'; // Regular (empty) heart
-import { FaHeart } from 'react-icons/fa';    // Solid heart
+import { FaRegHeart } from "react-icons/fa"; // Regular (empty) heart
+import { FaHeart } from "react-icons/fa"; // Solid heart
 
 function Recipe() {
   let params = useParams();
@@ -10,7 +10,7 @@ function Recipe() {
   const [activeTab, setActiveTab] = useState("instructions");
 
   const [favorites, setFavorites] = useState(
-    JSON.parse(localStorage.getItem('favoriteRecipe') || '[]')
+    JSON.parse(localStorage.getItem("favoriteRecipe") || "[]")
   );
 
   const fetchDetails = async () => {
@@ -41,15 +41,14 @@ function Recipe() {
     let newFavorites;
 
     if (isFavorite) {
-      newFavorites = favorites.filter(id => id !== recipeId);
+      newFavorites = favorites.filter((id) => id !== recipeId);
     } else {
       newFavorites = [...favorites, recipeId];
     }
     // console.log(newFavorites);
-    localStorage.setItem('favoriteRecipes', JSON.stringify(newFavorites));
+    localStorage.setItem("favoriteRecipes", JSON.stringify(newFavorites));
     setFavorites(newFavorites);
   };
-
 
   // Check if details is defined before rendering
   if (!details) {
@@ -62,12 +61,14 @@ function Recipe() {
         <h2>{details.title}</h2>
         <img className="recipe-image" src={details.image} alt="" />
       </div>
-      {
-                 favorites.includes(details.id) ? 
-                 <FaHeart className="favorited" onClick={() => toggleFavorite(details.id)} /> 
-                 : 
-                 <FaRegHeart onClick={() => toggleFavorite(details.id)} />
-              }
+      {favorites.includes(details.id) ? (
+        <FaHeart
+          className="favorited"
+          onClick={() => toggleFavorite(details.id)}
+        />
+      ) : (
+        <FaRegHeart onClick={() => toggleFavorite(details.id)} />
+      )}
       <section className="contents">
         <button
           className={activeTab === "instructions" ? "active" : ""}

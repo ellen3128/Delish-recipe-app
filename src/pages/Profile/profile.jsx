@@ -8,6 +8,7 @@ export default function Profile() {
   const [favoriteDesserts, setFavoriteDesserts] = useState([]);
   const [favoriteHealthy, setFavoriteHealthy] = useState([]);
   const [favoriteRecipes, setFavoriteRecipes] = useState([]);
+  const [favoriteSearches, setSearchedRecipes] = useState([]);
 
   useEffect(() => {
     const fetchFavorites = async (key, setter) => {
@@ -31,6 +32,7 @@ export default function Profile() {
     fetchFavorites("favoriteDesserts", setFavoriteDesserts);
     fetchFavorites("favoriteHealthy", setFavoriteHealthy);
     fetchFavorites("favoriteRecipes", setFavoriteRecipes);
+    fetchFavorites("favoriteSearches", setSearchedRecipes);
   }, []);
 
   // If user is not authenticated, redirect to home route
@@ -58,6 +60,7 @@ export default function Profile() {
       {renderFavorites("Favorite Desserts:", favoriteDesserts)}
       {renderFavorites("Favorite Healthy Recipes:", favoriteHealthy)}
       {renderFavorites("Favorite Recipes:", favoriteRecipes)}
+      {renderFavorites("Favorite from Searches:", favoriteSearches)}
     </div>
   );
 
