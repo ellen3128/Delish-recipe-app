@@ -94,7 +94,7 @@ const getVegan = async () => {
           <div className="card-healthy" key={recipe.id}>
             <div className="img-container">
               <Link to={"/recipe/" + recipe.id}>
-                <img src={recipe.image} alt={recipe.title} />
+                <img className="healthy-image" src={recipe.image} alt={recipe.title} />
               </Link>
             </div>
             <h4 className="recipeName">{recipe.title}</h4>
@@ -108,7 +108,7 @@ const getVegan = async () => {
           <div className="card-healthy" key={recipe.id}>
             <div className="img-container">
               <Link to={"/recipe/" + recipe.id}>
-                <img src={recipe.image} alt={recipe.title} />
+                <img className="healthy-image" src={recipe.image} alt={recipe.title} />
               </Link>
             </div>
             <h4 className="recipeName">{recipe.title}</h4>
@@ -122,7 +122,7 @@ const getVegan = async () => {
           <div className="card-healthy" key={recipe.id}>
             <div className="img-container">
               <Link to={"/recipe/" + recipe.id}>
-                <img src={recipe.image} alt={recipe.title} />
+                <img className="healthy-image" src={recipe.image} alt={recipe.title} />
               </Link>
             </div>
             <h4 className="recipeName">{recipe.title}</h4>

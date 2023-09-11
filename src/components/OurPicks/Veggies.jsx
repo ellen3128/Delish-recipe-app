@@ -53,7 +53,7 @@ export default function Vegies() {
             arrows: false,
             pagination: false,
             drag: 'free',
-            gap: '5rem',
+            gap: '4rem',
             width: '90vw'
           }}
         >

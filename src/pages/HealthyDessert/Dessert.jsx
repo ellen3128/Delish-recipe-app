@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 
 export default function Desserts() {
   const [dessert, setDessert] = useState([]);
+  const [favorites, setFavorites] = useState(
+    JSON.parse(localStorage.getItem('favoriteDesserts') || '[]')
+  );
 
   useEffect(() => {
     getDessert();
@@ -19,6 +22,20 @@ export default function Desserts() {
       setDessert(data.recipes);
   };
 
+  const toggleFavorite = (recipeId) => {
+    const isFavorite = favorites.includes(recipeId);
+    let newFavorites;
+
+    if (isFavorite) {
+      newFavorites = favorites.filter(id => id !== recipeId);
+    } else {
+      newFavorites = [...favorites, recipeId];
+    }
+
+    localStorage.setItem('favoriteDesserts', JSON.stringify(newFavorites));
+    setFavorites(newFavorites);
+  };
+
   return (
     <div>
         <h4 className="classification">Sweet Recipes</h4>
@@ -27,8 +44,15 @@ export default function Desserts() {
           <div className="card-healthy" key={recipe.id}>
             <div className="img-container">
             <Link to={'/recipe/' + recipe.id}>
-              <img src={recipe.image} alt={recipe.title} />
+              <img className="healthy-image" src={recipe.image} alt={recipe.title} />
               </Link>
+
+              <button 
+                className={favorites.includes(recipe.id) ? "favorited" : ""}
+                onClick={() => toggleFavorite(recipe.id)}>
+                  {favorites.includes(recipe.id) ? "Unfavorite" : "Favorite"}
+              </button>
+
             </div>
             <h4 className="recipeName">{recipe.title}</h4>
             </div>

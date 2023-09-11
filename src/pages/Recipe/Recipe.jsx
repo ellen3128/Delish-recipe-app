@@ -39,7 +39,7 @@ function Recipe() {
     <div className="recipe-wrapper">
       <div className="image-container">
         <h2>{details.title}</h2>
-        <img src={details.image} alt="" />
+        <img className="recipe-image" src={details.image} alt="" />
       </div>
 
       <section className="contents">

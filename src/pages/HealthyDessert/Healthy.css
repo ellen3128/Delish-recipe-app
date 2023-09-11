@@ -64,7 +64,7 @@ h4 {
   /* margin: 0 !important; */
 }
 
-.card-healthy img {
+.healthy-image {
   position: relative;
   zoom: 0.55;
   object-fit: cover;
@@ -75,18 +75,18 @@ h4 {
   /* filter: contrast(100%) saturate(100%) brightness(105%); */
 }
 
-.card-healthy img:hover {
+.healthy-image:hover {
   zoom: 0.56;
 }
 
 .card-healthy {
-  padding: 0;
-  width: 80%;
+  padding: 1rem;
+  width: 100%;
 }
 
 .card-dessert {
-  padding: 0;
-  width: 80%;
+  padding: 1rem;
+  width: 100%;
   /* filter: grayscale(100%); */
 }
 
