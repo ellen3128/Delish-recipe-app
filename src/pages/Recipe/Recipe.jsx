@@ -46,7 +46,7 @@ function Recipe() {
       newFavorites = [...favorites, recipeId];
     }
     // console.log(newFavorites);
-    localStorage.setItem('favoriteRecipe', JSON.stringify(newFavorites));
+    localStorage.setItem('favoriteRecipes', JSON.stringify(newFavorites));
     setFavorites(newFavorites);
   };
 
