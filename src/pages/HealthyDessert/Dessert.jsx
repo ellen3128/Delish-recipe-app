@@ -22,7 +22,7 @@ export default function Desserts() {
       const data = await api.json();
       console.log(data);
       // Make sure 'data.recipes' is the correct property => returned undefined bc it's an object
-      setDessert(data.recipes);
+      setDessert(data.recipes || []);
   };
 
   const toggleFavorite = (recipeId) => {
@@ -34,7 +34,7 @@ export default function Desserts() {
     } else {
       newFavorites = [...favorites, recipeId];
     }
-
+    // console.log(newFavorites);
     localStorage.setItem('favoriteDesserts', JSON.stringify(newFavorites));
     setFavorites(newFavorites);
   };
@@ -43,7 +43,7 @@ export default function Desserts() {
     <div>
         <h4 className="classification">Sweet Recipes</h4>
         <div className="grid-container">
-        {dessert.map((recipe) => (
+        {dessert && dessert.length > 0 && dessert.map((recipe) => (
           <div className="card-healthy" key={recipe.id}>
             <div className="img-container">
             <Link to={'/recipe/' + recipe.id}>
