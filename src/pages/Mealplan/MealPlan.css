@@ -29,10 +29,10 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-
+/* 
 input[type=number] {
     -moz-appearance: textfield;
-}
+} */
 
 .mealPlanbtn {
     padding: 0.5rem 1rem;
@@ -50,6 +50,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 5rem;
 }
 
 .macros ul {
@@ -82,42 +83,51 @@ ul {
 
 .meals {
     display: flex;
-    width: 30rem;
-    justify-content: space-evenly; 
-    padding-left: 0 2rem;
+    margin-left: 10rem !important;
+    margin-right: 10rem !important;
+    object-fit: contain;
+
 }
 
 article {
-    border: 2px solid rgb(83, 83, 83);
-    margin: 1rem;
+    background-color: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    /* border: 2px solid rgb(83, 83, 83); */
+    /* margin: 0.5rem; */
 }
 
 article h1 {
-    font-weight: 600;
-    font-size: 1.2rem;
-    margin-top: 2rem;
-    margin-left: 1rem;
+    font-weight: 800;
+    font-size: 1rem;
+    margin-top: 3rem;
+    margin-left: 2rem;
+    margin-bottom: -1rem;
 }
 
 article a {
-    margin: 2rem auto;
-    margin-top: 2rem;
+    /* margin: 2rem auto;
+    margin-top: 2rem; */
     font-weight: 800;
     background-color: aqua;
     padding: 1rem;
+    margin-left: 8rem;
+    margin-top: 0rem;
 }
 
 .mealImg {
-    width: 100px;
-    height: 400px;
-    padding: 1rem;
+    width: 200px;
+    height: 300px;
+    padding: 2rem;
+    object-fit: contain;
+    margin: 0 -2rem;
+    /* object-fit: cover; */
+    border-radius: 5rem;
     /* filter: grayscale(100%); */
 }
 
-/* .mealImg:hover {
-    filter: none;
-} */
-
+.instructions {
+    margin-top: 0rem;
+}
 .instructions li {
-    margin: 0 auto !important;
+    margin-top: -1px !important;
+    /* margin-left: 2srem !important; */
 }
