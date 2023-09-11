@@ -26,9 +26,13 @@ function Searched() {
     useEffect(() => {
         getSearched(params.search);
     }, [params.search]);
+    console.log(params.search);
 
     return (
-        <div className="grid">
+        <>
+        <h4 className="classification"> Searched : <span style={{textTransform:'uppercase'}}>{params.search}</span> </h4>
+        <div className="grid-container">
+            
             {isLoading ? (
                 <p>Loading...</p>
             ) : searchedRecipes.length > 0 ? (
@@ -38,7 +42,7 @@ function Searched() {
                         <div className="img-container">
                             <img src={item.image} alt="" />
                         </div>
-                        <h4>{item.title}</h4>
+                        <h4 className="recipeName">{item.title}</h4>
                         </Link>
                     </div>
                 ))
@@ -46,6 +50,7 @@ function Searched() {
                 <p>No recipes found</p>
             )}
         </div>
+        </>
     );
 }
 
