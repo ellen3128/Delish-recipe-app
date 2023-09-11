@@ -1,37 +1,36 @@
 .recipe-wrapper {
-    display: flex;
-    align-items: flex-start;
-    margin: 0rem 1rem -5rem 1rem;
-    padding: 0rem 3rem 0 3rem;
+  display: flex;
+  align-items: flex-start;
+  margin: 0rem 1rem -5rem 1rem;
+  padding: 0rem 3rem 0 3rem;
 }
 
 .image-container {
-    flex: 1;
-    margin-top: 1rem;
+  flex: 1;
+  margin-top: 1rem;
 }
 
 .contents {
-    flex: 2;
-    margin: 2rem 1rem;
+  flex: 2;
+  margin: 2rem 1rem;
 }
 
 button {
-    display: inline;
-    padding: 0.5rem 2rem;
-    margin: 2rem;
-    margin-bottom: 0;
-    color: #313131;
-    background: white;
-    border: 2px solid black;
-    font-weight: 600;
+  margin-left: 2rem !important;
+  display: inline;
+  padding: 0.5rem 2rem;
+  margin: 1rem;
+  margin-bottom: 0;
+  color: #313131;
+  background: white;
+  border: 2px solid black;
+  font-weight: 600;
 }
 
 button.active {
-    background: linear-gradient(35deg, #494949, #313131);
-    color: white;
+  background: linear-gradient(35deg, #494949, #313131);
+  color: white;
 }
-
-
 
 /* img {
     min-width: 30rem;
@@ -39,66 +38,64 @@ button.active {
     display: inline;
 } */
 
-
 .recipe-image {
-    min-width: 30rem;
-    padding: 1rem;
-    width: 100%;
-  }
+  min-width: 30rem;
+  padding: 1rem;
+  width: 100%;
+}
 
 .recipe-title {
-    /* margin-left: 4rem; */
-    font-size: 1.3rem;
-    padding: 4rem;
-    margin-left: 1rem;
-    margin-bottom: -2rem;
-    font-weight: 650;
+  /* margin-left: 4rem; */
+  font-size: 1.3rem;
+  padding: 4rem;
+  margin-left: 1rem;
+  margin-bottom: -2rem;
+  font-weight: 650;
 }
 
 .favorited {
-    color: red;
-    width: 2rem;
-    height: 2rem;
-  }
-  
-  .fa-heart, .fa-heart-o {
-    cursor: pointer;
-    transition: color 0.3s;
-    font-size: 1.5rem;
-  }
-  
+  color: red;
+  width: 2rem;
+  height: 2rem;
+}
+
+.fa-heart,
+.fa-heart-o {
+  cursor: pointer;
+  transition: color 0.3s;
+  font-size: 1.5rem;
+}
+
 h3 {
-    margin: 1rem;
-    font-weight: 300;
-    font-size: 16px;
+  margin: 1rem;
+  font-weight: 300;
+  font-size: 16px;
 }
 
 .contents a {
-    color: rgb(0, 87, 141);
-    font-weight: 500;
-    text-decoration: underline;
-    font-weight: 300;
-    font-size: 16px;
+  color: rgb(0, 87, 141);
+  font-weight: 500;
+  text-decoration: underline;
+  font-weight: 300;
+  font-size: 16px;
 }
 
 li {
-    font-size: 1rem;
-    line-height: 2rem;
-    text-align: left;
-    margin-left: 5rem;
+  font-size: 1rem;
+  line-height: 2rem;
+  text-align: left;
+  margin-left: 5rem;
 }
 
 ul {
-    margin-top: 2rem;
-    list-style-type: square;
+  margin-top: 2rem;
+  list-style-type: square;
 }
 
 ol {
-    margin-left: -50px;
-    font-weight: 300;
-    font-size: 16px;
-    list-style-type: decimal;
-    font-weight: 300;
+  margin-left: -50px;
+  font-weight: 300;
+  font-size: 16px;
+  list-style-type: decimal;
+  font-weight: 300;
 }
-
-
