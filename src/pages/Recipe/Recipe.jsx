@@ -1,11 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./Recipe.css";
+import { FaRegHeart } from "react-icons/fa"; // Regular (empty) heart
+import { FaHeart } from "react-icons/fa"; // Solid heart
 
 function Recipe() {
   let params = useParams();
   const [details, setDetails] = useState(null);
   const [activeTab, setActiveTab] = useState("instructions");
+
+  const [favorites, setFavorites] = useState(
+    JSON.parse(localStorage.getItem("favoriteRecipe") || "[]")
+  );
 
   const fetchDetails = async () => {
     try {
@@ -30,6 +36,20 @@ function Recipe() {
     fetchDetails();
   }, [params.name]);
 
+  const toggleFavorite = (recipeId) => {
+    const isFavorite = favorites.includes(recipeId);
+    let newFavorites;
+
+    if (isFavorite) {
+      newFavorites = favorites.filter((id) => id !== recipeId);
+    } else {
+      newFavorites = [...favorites, recipeId];
+    }
+    // console.log(newFavorites);
+    localStorage.setItem("favoriteRecipes", JSON.stringify(newFavorites));
+    setFavorites(newFavorites);
+  };
+
   // Check if details is defined before rendering
   if (!details) {
     return <div>Loading...</div>;
@@ -41,7 +61,14 @@ function Recipe() {
         <h2>{details.title}</h2>
         <img className="recipe-image" src={details.image} alt="" />
       </div>
-
+      {favorites.includes(details.id) ? (
+        <FaHeart
+          className="favorited"
+          onClick={() => toggleFavorite(details.id)}
+        />
+      ) : (
+        <FaRegHeart onClick={() => toggleFavorite(details.id)} />
+      )}
       <section className="contents">
         <button
           className={activeTab === "instructions" ? "active" : ""}
