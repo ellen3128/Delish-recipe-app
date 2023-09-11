@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./Healthy.css";
 import { Link } from 'react-router-dom';
+import { FaRegHeart } from 'react-icons/fa'; // Regular (empty) heart
+import { FaHeart } from 'react-icons/fa';    // Solid heart
+
 
 export default function Desserts() {
   const [dessert, setDessert] = useState([]);
@@ -47,12 +50,12 @@ export default function Desserts() {
               <img className="healthy-image" src={recipe.image} alt={recipe.title} />
               </Link>
 
-              <button 
-                className={favorites.includes(recipe.id) ? "favorited" : ""}
-                onClick={() => toggleFavorite(recipe.id)}>
-                  {favorites.includes(recipe.id) ? "Unfavorite" : "Favorite"}
-              </button>
-
+              {
+                 favorites.includes(recipe.id) ? 
+                 <FaHeart className="favorited" onClick={() => toggleFavorite(recipe.id)} /> 
+                 : 
+                 <FaRegHeart onClick={() => toggleFavorite(recipe.id)} />
+              }
             </div>
             <h4 className="recipeName">{recipe.title}</h4>
             </div>
