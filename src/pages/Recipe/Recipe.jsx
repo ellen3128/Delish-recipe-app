@@ -88,8 +88,8 @@ function Recipe() {
         </button>
         {activeTab === "instructions" && (
           <div className="contents">
-            <h3 dangerouslySetInnerHTML={{ __html: details.summary }}></h3>
-            <h3 dangerouslySetInnerHTML={{ __html: details.instructions }}></h3>
+            <h3 className="summary" dangerouslySetInnerHTML={{ __html: details.summary }}></h3>
+            <h3 className="summary" dangerouslySetInnerHTML={{ __html: details.instructions }}></h3>
           </div>
         )}
         {activeTab === "ingredients" && (

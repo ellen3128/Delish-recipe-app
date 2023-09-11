@@ -5,10 +5,10 @@ import "./Profile.css";
 
 export default function Profile() {
   const { user, isAuthenticated, isLoading } = useAuth0();
-  const [favoriteDesserts, setFavoriteDesserts] = useState([]);
-  const [favoriteHealthy, setFavoriteHealthy] = useState([]);
+  // const [favoriteDesserts, setFavoriteDesserts] = useState([]);
+  // const [favoriteHealthy, setFavoriteHealthy] = useState([]);
   const [favoriteRecipes, setFavoriteRecipes] = useState([]);
-  const [favoriteSearches, setSearchedRecipes] = useState([]);
+  // const [favoriteSearches, setSearchedRecipes] = useState([]);
 
   useEffect(() => {
     const fetchFavorites = async (key, setter) => {
@@ -29,10 +29,10 @@ export default function Profile() {
       }
     };
 
-    fetchFavorites("favoriteDesserts", setFavoriteDesserts);
-    fetchFavorites("favoriteHealthy", setFavoriteHealthy);
+    // fetchFavorites("favoriteDesserts", setFavoriteDesserts);
+    // fetchFavorites("favoriteHealthy", setFavoriteHealthy);
     fetchFavorites("favoriteRecipes", setFavoriteRecipes);
-    fetchFavorites("favoriteSearches", setSearchedRecipes);
+    // fetchFavorites("favoriteSearches", setSearchedRecipes);
   }, []);
 
   // If user is not authenticated, redirect to home route
@@ -57,10 +57,14 @@ export default function Profile() {
       </h2>
       <p className="userEmail">{user.email}</p>
 
-      {renderFavorites("Favorite Desserts:", favoriteDesserts)}
-      {renderFavorites("Favorite Healthy Recipes:", favoriteHealthy)}
-      {renderFavorites("Favorite Recipes:", favoriteRecipes)}
-      {renderFavorites("Favorite from Searches:", favoriteSearches)}
+      {/* {renderFavorites("Favorite Desserts:", favoriteDesserts)}
+      {renderFavorites("Favorite Healthy Recipes:", favoriteHealthy)} */}
+      <div className="favorites">
+    
+      <p className="favorite-title">{renderFavorites("Favorite Recipes:", favoriteRecipes)}</p>
+      
+      {/* {renderFavorites("Favorite from Searches:", favoriteSearches)} */}
+      </div>
     </div>
   );
 
@@ -69,13 +73,13 @@ export default function Profile() {
       return (
         <div>
           <h3>{title}</h3>
-          <ul>
+          <ol style={{fontWeight:"600"}}>
             {items.map((item) => (
               <li key={item.id}>
-                <Link to={`/recipe/${item.id}`}>{item.title}</Link>
+                <Link className="favoriteList" to={`/recipe/${item.id}`}>{item.title}</Link>
               </li>
             ))}
-          </ul>
+          </ol>
         </div>
       );
     }
