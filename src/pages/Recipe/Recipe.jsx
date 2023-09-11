@@ -10,7 +10,7 @@ function Recipe() {
   const [activeTab, setActiveTab] = useState("instructions");
 
   const [favorites, setFavorites] = useState(
-    JSON.parse(localStorage.getItem("favoriteRecipe") || "[]")
+    JSON.parse(localStorage.getItem("favoriteRecipes") || "[]")
   );
 
   const fetchDetails = async () => {
@@ -56,9 +56,12 @@ function Recipe() {
   }
 
   return (
+    <>
+    <h2 className="recipe-title">{details.title}</h2>
     <div className="recipe-wrapper">
+       
       <div className="image-container">
-        <h2>{details.title}</h2>
+       
         <img className="recipe-image" src={details.image} alt="" />
       </div>
       {favorites.includes(details.id) ? (
@@ -98,6 +101,7 @@ function Recipe() {
         )}
       </section>
     </div>
+    </>
   );
 }
 

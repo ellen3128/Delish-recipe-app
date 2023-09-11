@@ -116,13 +116,14 @@ article a {
 }
 
 .mealImg {
-    width: 200px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     padding: 2rem;
     object-fit: contain;
-    margin: 0 -2rem;
+    /* margin: 0 -2rem; */
     /* object-fit: cover; */
     border-radius: 5rem;
+    margin: -3rem auto;
     /* filter: grayscale(100%); */
 }
 
