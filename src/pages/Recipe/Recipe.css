@@ -12,7 +12,6 @@
 
 .contents {
     flex: 2;
-    /* background-color: yellow; */
     margin: 2rem 1rem;
 }
 
@@ -31,6 +30,8 @@ button.active {
     background: linear-gradient(35deg, #494949, #313131);
     color: white;
 }
+
+
 
 img {
     min-width: 30rem;
@@ -52,7 +53,6 @@ h3 {
 
 .contents a {
     color: rgb(0, 87, 141);
-    /* background-color: rgb(0, 56, 109); */
     font-weight: 500;
     text-decoration: underline;
     font-weight: 300;
@@ -72,10 +72,11 @@ ul {
 }
 
 ol {
-    /* background-color: yellow; */
     margin-left: -50px;
     font-weight: 300;
     font-size: 16px;
     list-style-type: decimal;
     font-weight: 300;
 }
+
+

@@ -1,0 +1,83 @@
+.card-searched {
+    margin: 0 auto;
+    padding: 2rem;
+    /* display: flex; */
+  }
+  
+  .grid-container {
+    display: grid;
+    /* grid-template-columns: repeat(4, 1fr); */
+    grid-template-columns: 1fr;
+    max-width: 90%;
+    margin: 5rem auto;
+  }
+  
+  .classification {
+    font-weight: 800;
+    font-size: 1.6rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    /* margin-bottom: 1rem; */
+    text-transform: none;
+    
+  }
+
+  .card-searched img {
+    position: relative;
+    zoom: 0.55;
+    object-fit: cover;
+    border-radius: 25rem;
+    height: 28rem;
+    margin-bottom: 2.5rem;
+    /* filter: grayscale(100%); */
+    /* filter: contrast(100%) saturate(100%) brightness(105%); */
+  }
+  
+  .card-searched img:hover {
+    zoom: 0.56;
+  }
+  
+  .card-searched {
+    padding: 0;
+    width: 80%;
+  }
+  
+  
+  .recipeName {
+    text-align: center;
+    font-weight: 600;
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Default for Mobile */
+  /* .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        max-width: 90%; 
+        margin: 0 auto;
+        padding: 0;
+    } */
+  
+  /* Tablets: 2 columns */
+  @media (min-width: 600px) {
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 85%;
+    }
+  }
+  
+  /* Small Desktops: 3 columns */
+  @media (min-width: 900px) and (max-width: 1199px) {
+    .grid-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* Regular Desktops: 4 columns */
+  @media (min-width: 1200px) {
+    .grid-container {
+      grid-template-columns: repeat(4, 1fr);
+      max-width: 80%;
+    }
+  }

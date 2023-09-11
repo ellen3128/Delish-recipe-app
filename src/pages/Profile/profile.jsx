@@ -19,9 +19,9 @@ const Profile = () => {
   // If the user is authenticated and loading is complete, render the user's profile data
   return (
     <div className="container-user">
-      <div className="image-container">
+      <p className="image-container">
         <img className="userpic" src={user.picture} alt={""} />
-      </div>
+      </p>
       <h2 className="userName">
         Welcome,{" "}
         <span style={{ color: "#00473D", fontWeight: "800" }}>{user.name}</span>

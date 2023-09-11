@@ -10,10 +10,10 @@ function MealList({ mealData }) {
       <section className="nutrients">
         <h1 className="macros">Macros</h1>
         <ul>
-          <li>Calories: {Math.round(nutrients.calories)}</li>
-          <li>Carbohydrates: {Math.round(nutrients.carbohydrates)}</li>
-          <li>Fat: {Math.round(nutrients.fat)}</li>
-          <li>Protein: {Math.round(nutrients.protein)}</li>
+          <li> <span style={{fontWeight:'bold'}}>Calories:</span> {Math.round(nutrients.calories)}cal</li>
+          <li> <span style={{fontWeight:'bold'}}>Carbohydrates:</span> {Math.round(nutrients.carbohydrates)}g</li>
+          <li> <span style={{fontWeight:'bold'}}>Fat:</span> {Math.round(nutrients.fat)}g</li>
+          <li> <span style={{fontWeight:'bold'}}>Protein:</span> {Math.round(nutrients.protein)}g</li>
         </ul>
       </section>
 
