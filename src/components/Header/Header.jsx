@@ -35,7 +35,7 @@ function Header() {
                     {" "}
                     <span className="username">
                       {" "}
-                      {user.given_name}'s Account{" "}
+                      {user.given_name} Account{" "}
                     </span>{" "}
                   </Link>{" "}
                   <LogoutButton />
