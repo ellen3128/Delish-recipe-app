@@ -1,4 +1,4 @@
-## Delish
+## DELISH - Recipe & Meal Planning
 
 - Delish is a web-based application designed to help professional and everyday cooks discover new recipes from around the world. 
 - With a user-friendly interface, Delish allows users to tailor their recipe searches based on specific ingredients, cuisines, dietary needs. 
@@ -7,30 +7,49 @@
 ## Preview 
 
 ### Home page 
+![Home Screen](assets/HomePage.png)
 
-### Recipes ... 
+### Recipes by category
+![Recipes by Category](assets/RecipesCategory.png) 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+### Recipes by cuisine
+![Recipes by Cuisine](assets/RecipesCuisine.png)
+
+### Detailed recipes
+![Recipe Details](assets/DetailedRecipes.png)
+
+### Meal planning 
+![Meal Plan](assets/DetailedRecipes.png)
+
+### Favorites 
+![Favorites](assets/Favorites.png)
+
 
 ## Technologies Used
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+- React
+- CSS
+- Auth0
+- Spoonacular(3rd Party API)
+- Splide
+- Netlify
+
 
 ## Getting Started
 
 [Click to see the app!](https://delish-recipes-and-mealplans.netlify.app/)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## Acknowledgement 
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ## License
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Next Steps 
+
+- Integrate backend database
+- Add user-centric features such as custom recipe uploads and share/save recipes functionalities
+- Enhance meal planning options to include dietary restrictions and timeline (daily, weekly, monthly) options 
+- Implement additional icebox features such as groceries list generator and advanced nutritional data visualization 
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
