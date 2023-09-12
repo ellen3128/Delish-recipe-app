@@ -19,7 +19,7 @@
 ![Recipe Details](assets/DetailedRecipes.png)
 
 ### Meal planning 
-![Meal Plan](assets/DetailedRecipes.png)
+![Meal Plan](assets/MealPlan.png)
 
 ### Favorites 
 ![Favorites](assets/Favorites.png)
