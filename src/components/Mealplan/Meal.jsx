@@ -4,17 +4,26 @@ function Meal({ meal }) {
   const [imageUrl, setImageUrl] = useState("");
 
   useEffect(() => {
-    fetch(
-      `https://api.spoonacular.com/recipes/${meal.id}/information?apiKey=${process.env.REACT_APP_API_KEY}&includeNutrition=false`
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        setImageUrl(data.image);
-      })
-      .catch(() => {
-        console.log("Error");
-      });
-  }, [meal.id]);
+    const fetchImage = async () => {
+        try {
+          const response = await fetch(
+            `https://api.spoonacular.com/recipes/${meal.id}/information?apiKey=${process.env.REACT_APP_API_KEY}&includeNutrition=false`
+          );
+  
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+  
+          const data = await response.json();
+          setImageUrl(data.image);
+        } catch (error) {
+          console.log("Error:", error);
+        }
+      };
+  
+      fetchImage();
+    }, [meal.id]);
+  
 
   return (
     <article>

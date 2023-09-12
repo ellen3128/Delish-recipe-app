@@ -9,18 +9,16 @@ export default function Healthy() {
 
   useEffect(() => {
     const fetchAllRecipes = async () => {
+      // Fetch recipes for each category
       const keto = (await getKetogenic()) || [];
-      console.log("Keto:", keto);
       const glutenFree = (await getGlutenFree()) || [];
       const vegan = (await getVegan()) || [];
 
       // Gather all recipes from the fetches
       const combinedRecipes = [...keto, ...glutenFree, ...vegan];
-
-      // Filter out duplicates
       const uniqueRecipes = filterUniqueRecipes(combinedRecipes);
 
-      // Set states accordingly
+      // Filter uniqueRecipes to get only the recipes in specific category
       setKetogenicRecipes(
         uniqueRecipes.filter((recipe) => keto.includes(recipe))
       );
@@ -34,9 +32,10 @@ export default function Healthy() {
   }, []);
 
   const filterUniqueRecipes = (recipes) => {
-    const seenIds = new Set();
+    const seenIds = new Set(); //store IDs already "seen" or processed
     const uniqueRecipes = [];
 
+    // To avoid duplicates: if id is unique, add to seenIds and uniqueRecipes
     for (const recipe of recipes) {
       if (!seenIds.has(recipe.id)) {
         seenIds.add(recipe.id);
