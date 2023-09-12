@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./Recipe.css";
-import { FaRegHeart } from "react-icons/fa"; // Regular (empty) heart
-import { FaHeart } from "react-icons/fa"; // Solid heart
+import { FaRegHeart } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa";
 
 function Recipe() {
   let params = useParams();
@@ -45,62 +45,64 @@ function Recipe() {
     } else {
       newFavorites = [...favorites, recipeId];
     }
-    // console.log(newFavorites);
     localStorage.setItem("favoriteRecipes", JSON.stringify(newFavorites));
     setFavorites(newFavorites);
   };
 
-  // Check if details is defined before rendering
   if (!details) {
     return <div>Loading...</div>;
   }
 
   return (
     <>
-    <h2 className="recipe-title">{details.title}</h2>
-    <div className="recipe-wrapper">
-       
-      <div className="image-container">
-       
-        <img className="recipe-image" src={details.image} alt="" />
-      </div>
-      {favorites.includes(details.id) ? (
-        <FaHeart
-          className="favorited"
-          onClick={() => toggleFavorite(details.id)}
-        />
-      ) : (
-        <FaRegHeart onClick={() => toggleFavorite(details.id)} />
-      )}
-      <section className="contents">
-        <button
-          className={activeTab === "instructions" ? "active" : ""}
-          onClick={() => setActiveTab("instructions")}
-        >
-          Instructions
-        </button>
+      <h2 className="recipe-title">{details.title}</h2>
+      <div className="recipe-wrapper">
+        <div className="image-container">
+          <img className="recipe-image" src={details.image} alt="" />
+        </div>
+        {favorites.includes(details.id) ? (
+          <FaHeart
+            className="favorited"
+            onClick={() => toggleFavorite(details.id)}
+          />
+        ) : (
+          <FaRegHeart onClick={() => toggleFavorite(details.id)} />
+        )}
+        <section className="contents">
+          <button
+            className={activeTab === "instructions" ? "active" : ""}
+            onClick={() => setActiveTab("instructions")}
+          >
+            Instructions
+          </button>
 
-        <button
-          className={activeTab === "ingredients" ? "active" : ""}
-          onClick={() => setActiveTab("ingredients")}
-        >
-          Ingredients
-        </button>
-        {activeTab === "instructions" && (
-          <div className="contents">
-            <h3 className="summary" dangerouslySetInnerHTML={{ __html: details.summary }}></h3>
-            <h3 className="summary" dangerouslySetInnerHTML={{ __html: details.instructions }}></h3>
-          </div>
-        )}
-        {activeTab === "ingredients" && (
-          <ul className="contents">
-            {details.extendedIngredients.map((ingredient) => (
-              <li key={ingredient.id}>{ingredient.original}</li>
-            ))}
-          </ul>
-        )}
-      </section>
-    </div>
+          <button
+            className={activeTab === "ingredients" ? "active" : ""}
+            onClick={() => setActiveTab("ingredients")}
+          >
+            Ingredients
+          </button>
+          {activeTab === "instructions" && (
+            <div className="contents">
+              <h3
+                className="summary"
+                dangerouslySetInnerHTML={{ __html: details.summary }}
+              ></h3>
+              <h3
+                className="summary"
+                dangerouslySetInnerHTML={{ __html: details.instructions }}
+              ></h3>
+            </div>
+          )}
+          {activeTab === "ingredients" && (
+            <ul className="contents">
+              {details.extendedIngredients.map((ingredient) => (
+                <li key={ingredient.id}>{ingredient.original}</li>
+              ))}
+            </ul>
+          )}
+        </section>
+      </div>
     </>
   );
 }

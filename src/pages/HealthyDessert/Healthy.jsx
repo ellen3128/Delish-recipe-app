@@ -3,8 +3,6 @@ import "./Healthy.css";
 import { Link } from "react-router-dom";
 
 export default function Healthy() {
-  // const [healthy, setHealthy] = useState([]);
-
   const [ketogenicRecipes, setKetogenicRecipes] = useState([]);
   const [glutenFreeRecipes, setGlutenFreeRecipes] = useState([]);
   const [veganRecipes, setVeganRecipes] = useState([]);
@@ -73,20 +71,8 @@ export default function Healthy() {
     return data.results;
   };
 
-  // const getHealthy = async () => {
-  //     const api = await fetch(
-  //       `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&number=12&diet=Ketogenic|GlutenFree|Vegetarian`
-  //     );
-  //     const data = await api.json();
-  //     console.log(data);
-  //     // Make sure 'data.recipes' is the correct property => returned undefined bc it's an object
-  //     setHealthy(data.results);
-  // };
-
   return (
     <div>
-      {/* <h3 className="picks">Healthy Selections</h3> */}
-
       <h4 className="classification">Ketogenic</h4>
       <div className="grid-container">
         {ketogenicRecipes.map((recipe) => (

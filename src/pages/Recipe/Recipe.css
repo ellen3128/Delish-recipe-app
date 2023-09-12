@@ -32,12 +32,6 @@ button.active {
   color: white;
 }
 
-/* img {
-    min-width: 30rem;
-    height: 25rem;
-    display: inline;
-} */
-
 .recipe-image {
   min-width: 30rem;
   padding: 1rem;
@@ -45,7 +39,6 @@ button.active {
 }
 
 .recipe-title {
-  /* margin-left: 4rem; */
   font-size: 1.3rem;
   padding: 4rem;
   margin-left: 1rem;

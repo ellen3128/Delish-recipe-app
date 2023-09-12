@@ -5,10 +5,8 @@ import "./Profile.css";
 
 export default function Profile() {
   const { user, isAuthenticated, isLoading } = useAuth0();
-  // const [favoriteDesserts, setFavoriteDesserts] = useState([]);
-  // const [favoriteHealthy, setFavoriteHealthy] = useState([]);
+
   const [favoriteRecipes, setFavoriteRecipes] = useState([]);
-  // const [favoriteSearches, setSearchedRecipes] = useState([]);
 
   useEffect(() => {
     const fetchFavorites = async (key, setter) => {
@@ -29,23 +27,17 @@ export default function Profile() {
       }
     };
 
-    // fetchFavorites("favoriteDesserts", setFavoriteDesserts);
-    // fetchFavorites("favoriteHealthy", setFavoriteHealthy);
     fetchFavorites("favoriteRecipes", setFavoriteRecipes);
-    // fetchFavorites("favoriteSearches", setSearchedRecipes);
   }, []);
 
-  // If user is not authenticated, redirect to home route
   if (!isAuthenticated) {
     return <Navigate to="/" />;
   }
 
-  // If the authentication status is true but the confirmation is still loading, render a loading message
   if (isLoading) {
     return <div>Loading ...</div>;
   }
 
-  // If the user is authenticated and loading is complete, render the user's profile data
   return (
     <div className="container-user">
       <div className="image-container">
@@ -57,13 +49,10 @@ export default function Profile() {
       </h2>
       <p className="userEmail">{user.email}</p>
 
-      {/* {renderFavorites("Favorite Desserts:", favoriteDesserts)}
-      {renderFavorites("Favorite Healthy Recipes:", favoriteHealthy)} */}
       <div className="favorites">
-    
-      <p className="favorite-title">{renderFavorites("Favorite Recipes:", favoriteRecipes)}</p>
-      
-      {/* {renderFavorites("Favorite from Searches:", favoriteSearches)} */}
+        <p className="favorite-title">
+          {renderFavorites("Favorite Recipes:", favoriteRecipes)}
+        </p>
       </div>
     </div>
   );
@@ -73,10 +62,12 @@ export default function Profile() {
       return (
         <div>
           <h3>{title}</h3>
-          <ol style={{fontWeight:"600"}}>
+          <ol style={{ fontWeight: "600" }}>
             {items.map((item) => (
               <li key={item.id}>
-                <Link className="favoriteList" to={`/recipe/${item.id}`}>{item.title}</Link>
+                <Link className="favoriteList" to={`/recipe/${item.id}`}>
+                  {item.title}
+                </Link>
               </li>
             ))}
           </ol>

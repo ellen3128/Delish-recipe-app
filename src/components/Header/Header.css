@@ -23,22 +23,18 @@
   src: url("../../../public/font/Mollen.otf") format("opentype");
 }
 
-
 @font-face {
   font-family: "MonoSpatial";
   src: url("../../../public/font/MonoSpatial.ttf") format("opentype");
 }
-
 
 @font-face {
   font-family: "AdorableMemories";
   src: url("../../../public/font/AdorableMemories.ttf") format("opentype");
 }
 
-
 .grid {
-  /* background-color: rgb(76, 106, 32); */
-  background: linear-gradient(to right, #00473D, #00473D);
+  background: linear-gradient(to right, #00473d, #00473d);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -81,14 +77,13 @@
   height: 100px;
   font-weight: 500;
   letter-spacing: 2px;
-  /* line-height: 50px; */
   color: white;
   margin-top: -80px;
 }
 
 .text p {
   font-weight: bold;
-  color: #E6FF55;
+  color: #e6ff55;
   font-size: 50px;
   line-height: 66px;
 }
@@ -102,5 +97,5 @@
   color: white;
   margin-right: 5px;
   font-weight: 500;
-  color: #E6FF55;
+  color: #e6ff55;
 }

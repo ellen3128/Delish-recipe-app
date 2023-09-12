@@ -6,7 +6,6 @@ export default function Auth0ProviderwithNav({ children }) {
   const navigate = useNavigate();
   const domain = process.env.REACT_APP_AUTH0_DOMAIN;
   const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
-//   const redirectUri = process.env.REACT_APP_AUTH0_CALLBACK_URL;
 
   // Determine which callback URL to use based on the environment
   const redirectUri =

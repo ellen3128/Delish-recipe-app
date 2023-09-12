@@ -37,39 +37,40 @@ export default function Popular() {
     );
     const data = await api.json();
     localStorage.setItem("popular", JSON.stringify(data.recipes));
-    setPopular(data.recipes)
+    setPopular(data.recipes);
   };
 
   return (
     <div>
       <div className="wrapper">
-      <div className="grid-rows-1 topic">
-        <h3 className="picks1">Our Picks</h3>
+        <div className="grid-rows-1 topic">
+          <h3 className="picks1">Our Picks</h3>
         </div>
         <div className="grid-rows-1">
-        <Splide options={{
-            fixedWidth: '270px',
-            fixedHeight: '400px',
-            arrows: false,
-            pagination: false,
-            drag: 'free',
-            gap: '4rem',
-            width: '90vw'
-          }}
-        >
-          {popular.map((recipe) => {
-            return (
-              <SplideSlide key={recipe.id}>
-                <div className="random-card">
-                  <Link to={"/recipe/" + recipe.id}>
-                    <img src={recipe.image} alt={recipe.title} />
-                  </Link>
-                </div>
-                <p className="random-title">{recipe.title}</p>
-              </SplideSlide>
-            );
-          })}
-        </Splide>
+          <Splide
+            options={{
+              fixedWidth: "270px",
+              fixedHeight: "400px",
+              arrows: false,
+              pagination: false,
+              drag: "free",
+              gap: "4rem",
+              width: "90vw",
+            }}
+          >
+            {popular.map((recipe) => {
+              return (
+                <SplideSlide key={recipe.id}>
+                  <div className="random-card">
+                    <Link to={"/recipe/" + recipe.id}>
+                      <img src={recipe.image} alt={recipe.title} />
+                    </Link>
+                  </div>
+                  <p className="random-title">{recipe.title}</p>
+                </SplideSlide>
+              );
+            })}
+          </Splide>
         </div>
       </div>
     </div>

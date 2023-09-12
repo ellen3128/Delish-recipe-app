@@ -44,17 +44,18 @@ export default function Vegies() {
     <div>
       <div className="wrapper">
         <div className="topic">
-        <h3 className="picks2">Veggie Picks</h3>
+          <h3 className="picks2">Veggie Picks</h3>
         </div>
 
-        <Splide options={{
-            fixedWidth: '270px',
-            fixedHeight: '400px',
+        <Splide
+          options={{
+            fixedWidth: "270px",
+            fixedHeight: "400px",
             arrows: false,
             pagination: false,
-            drag: 'free',
-            gap: '4rem',
-            width: '90vw'
+            drag: "free",
+            gap: "4rem",
+            width: "90vw",
           }}
         >
           {vegies.map((recipe) => {

@@ -2,10 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import "./Searched.css";
 
-
 function Searched() {
   const [searchedRecipes, setSearchedRecipes] = useState([]);
-  const [isLoading, setIsLoading] = useState(true); // Add loading state
+  const [isLoading, setIsLoading] = useState(true);
   let params = useParams();
 
   const getSearched = async (name) => {
@@ -20,11 +19,11 @@ function Searched() {
       }
       const recipes = await data.json();
       setSearchedRecipes(recipes.results);
-      setIsLoading(false); // Set loading state to false when data is fetched
+      setIsLoading(false);
     } catch (error) {
       console.error("Error fetching data:", error);
       setSearchedRecipes([]);
-      setIsLoading(false); // Set loading state to false on error
+      setIsLoading(false);
     }
   };
 
@@ -32,8 +31,6 @@ function Searched() {
     getSearched(params.search);
   }, [params.search]);
   console.log(params.search);
-
-
 
   return (
     <>
