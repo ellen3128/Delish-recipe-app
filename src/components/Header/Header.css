@@ -100,42 +100,6 @@
   color: #e6ff55;
 }
 
-@media only screen and (max-width: 480px) {
-  .grid {
-    background: linear-gradient(to right, #00473d, #00473d);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    /* overflow: hidden; */
-  }
-
-  .grid-item {
-    /* margin: 0.5rem 0 0.5rem 0; */
-    /* margin: 0 auto; */
-    line-height: 13px;
-    text-align: center;
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: white;
-    display: inline-block;
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  .delish {
-    font-family: MonoSpatial;
-    margin-left: 18px;
-    letter-spacing: 3px;
-    font-size: 1rem;
-    font-weight: 800;
-  }
-  
-  .grid-item:hover {
-    transform: scale(1.1);
-  }
-  
-}
-
 @media only screen and (max-width: 1024px) {
   .grid {
     gap: 5px;
@@ -149,4 +113,65 @@
   .delish {
     margin-left: 35px;
   }
+}
+
+@media only screen and (max-width: 480px) {
+  .grid {
+    background: linear-gradient(to right, #00473d, #00473d);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    /* overflow: hidden; */
+  }
+
+  .grid-item {
+    /* margin: 0.5rem 0 0.5rem 0; */
+    /* margin: 0 auto; */
+    line-height: 13px;
+    text-align: center;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: white;
+    display: inline-block;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .delish {
+    font-family: MonoSpatial;
+    margin-left: 13px;
+    letter-spacing: 3px;
+    font-size: 1.1rem;
+    font-weight: 800;
+  }
+  
+  .grid-item:hover {
+    transform: scale(1.1);
+  }
+  
+  .bannerImg {
+    width: 55%;
+    height: auto;
+  }
+
+  .text p {
+    font-weight: bold;
+    color: #e6ff55;
+    font-size: 20px;
+    line-height: 25px;
+    margin-top: 35px;
+    text-align: right;
+    padding: 0 8px;
+  }
+  
+  .subtext {
+    font-size: 12px !important;
+    line-height: 18px !important;
+    text-align: right;
+    margin-left: 60px;
+    margin-top: -15px !important;
+    width: 200px;
+    font-weight: 400;
+  }
+
 }
