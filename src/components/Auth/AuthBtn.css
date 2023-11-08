@@ -52,6 +52,15 @@
   background-color: #e8ff65;
 }
 
+@media only screen and (max-width: 1024px) {
+  .authBtn {
+    margin-right: 35px;
+    padding: 0.2rem 1.5rem;
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .authBtn {
     margin-left: 0px !important;
@@ -62,11 +71,3 @@
   }
 }
 
-@media only screen and (max-width: 1024px) {
-  .authBtn {
-    margin-right: 35px;
-    padding: 0.2rem 1.5rem;
-    font-size: 18px;
-    line-height: 25px;
-  }
-}
