@@ -106,26 +106,27 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 7px;
+    gap: 10px;
     /* overflow: hidden; */
   }
 
   .grid-item {
     /* margin: 0.5rem 0 0.5rem 0; */
-    font-size: 1rem;
+    /* margin: 0 auto; */
+    line-height: 13px;
+    text-align: center;
+    font-size: 0.8rem;
     font-weight: 600;
     color: white;
-    padding: 0rem;
     display: inline-block;
     transition: transform 0.2s ease-in-out;
   }
   
   .delish {
     font-family: MonoSpatial;
-    /* text-align: left !important; */
-    /* margin-left: 10px; */
+    margin-left: 18px;
     letter-spacing: 3px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 800;
   }
   
