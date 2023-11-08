@@ -99,3 +99,38 @@
   font-weight: 500;
   color: #e6ff55;
 }
+
+@media only screen and (max-width: 480px) {
+  .grid {
+    background: linear-gradient(to right, #00473d, #00473d);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    /* overflow: hidden; */
+  }
+
+  .grid-item {
+    /* margin: 0.5rem 0 0.5rem 0; */
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    padding: 0rem;
+    display: inline-block;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .delish {
+    font-family: MonoSpatial;
+    /* text-align: left !important; */
+    /* margin-left: 10px; */
+    letter-spacing: 3px;
+    font-size: 1.2rem;
+    font-weight: 800;
+  }
+  
+  .grid-item:hover {
+    transform: scale(1.1);
+  }
+  
+}
