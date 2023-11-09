@@ -100,9 +100,11 @@
   color: #e6ff55;
 }
 
+/* ✨✨✨✨ */
+
 @media only screen and (max-width: 1024px) {
   .grid {
-    gap: 5px;
+    gap: 30px;
   }
 
   .grid-item {
@@ -113,7 +115,33 @@
   .delish {
     margin-left: 35px;
   }
+
+  .bannerImg {
+    width: 55%;
+    height: auto;
+  }
+
+  .text p {
+    font-weight: bold;
+    color: #e6ff55;
+    font-size: 40px;
+    line-height: 45px;
+    margin-left: 105px;
+    margin-top: 15px;
+    text-align: left;
+  }
+  
+  .subtext {
+    font-size: 15px !important;
+    line-height: 20px !important;
+    margin-top: -5px !important;
+    width: 250px;
+    font-weight: 300;
+  }
+
 }
+
+/* ✨✨✨✨ */
 
 @media only screen and (max-width: 480px) {
   .grid {
@@ -130,7 +158,7 @@
     /* margin: 0 auto; */
     line-height: 13px;
     text-align: center;
-    font-size: 0.7rem;
+    font-size: 12px;
     font-weight: 600;
     color: white;
     display: inline-block;
@@ -171,7 +199,7 @@
     margin-left: 60px;
     margin-top: -15px !important;
     width: 200px;
-    font-weight: 400;
+    font-weight: 300;
   }
 
 }
