@@ -157,7 +157,7 @@
     /* margin: 0.5rem 0 0.5rem 0; */
     /* margin: 0 auto; */
     line-height: 13px;
-    text-align: center;
+    text-align: left;
     font-size: 12px;
     font-weight: 600;
     color: white;
@@ -178,8 +178,9 @@
   }
   
   .bannerImg {
-    width: 55%;
+    width: 50%;
     height: auto;
+    margin-left: 20px;
   }
 
   .text p {
@@ -188,18 +189,19 @@
     font-size: 20px;
     line-height: 25px;
     margin-top: 35px;
-    text-align: right;
+    text-align: left;
     padding: 0 8px;
   }
   
   .subtext {
-    font-size: 12px !important;
-    line-height: 18px !important;
+    font-size: 11px !important;
+    line-height: 13px !important;
     text-align: right;
     margin-left: 60px;
+    margin-right: 20px;
     margin-top: -15px !important;
-    width: 200px;
-    font-weight: 300;
+    width: 180px;
+    font-weight: 200;
   }
 
 }
