@@ -20,13 +20,13 @@
   transition: all 0.2s;
 }
 
-.slink h4 {
+.category-name {
   color: white;
   font-size: 1.2rem;
   padding: 0.5rem;
 }
 
-.slink svg {
+.category-icon {
   color: white;
   font-size: 2.3rem;
 }
@@ -37,7 +37,33 @@
   color: white;
 }
 
-.slink.active h4,
-.slink.active svg {
+.slink.active .category-name,
+.slink.active .category-icon {
   color: white;
+}
+
+/* ✨✨✨✨ */
+
+@media only screen and (max-width: 1024px) {
+  .slink {
+    width: 5.5rem;
+    height: 5.3rem;
+  }
+
+  .category-icon {
+    margin-top: 6px;
+    font-size: 2.5rem;
+  }
+
+  .category-name {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+}
+
+/* ✨✨✨✨ */
+
+@media only screen and (max-width: 480px) {
+
 }
