@@ -23,3 +23,25 @@
   left: 0%;
   color: white;
 }
+
+/* ✨✨✨✨ */
+
+@media only screen and (max-width: 1024px) {
+
+} 
+
+/* ✨✨✨✨ */
+
+@media only screen and (max-width: 480px) {
+  .searchForm {
+    width: 70%;
+  }
+
+  .searchInput {
+    font-size: 1rem;
+  }
+
+  .searchIcon {
+    padding-bottom: 3px;
+  }
+} 
