@@ -45,3 +45,74 @@
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
+
+/* ✨✨✨✨ */
+
+@media only screen and (max-width: 1024px) {
+  .wrapper {
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+
+  .random-card {
+    min-height: 15rem;
+    width: 100%;
+  }
+
+  .random-card img {
+    zoom: 0.45;
+  }
+
+  .random-title {
+    margin-top: -4.5rem;
+    font-size: 0.9rem;
+  }
+
+  .picks1, .picks2 {
+    font-size: 1.2rem;
+  }
+}
+
+
+/* ✨✨✨✨ */
+
+@media only screen and (max-width: 480px) {
+  .wrapper {
+    padding: 0.5rem;
+  }
+
+  .random-card {
+    min-height: 12rem;
+  }
+
+  .random-card img {
+    zoom: 0.35;
+  }
+
+  .random-title {
+    margin-top: -3.5rem;
+    font-size: 0.8rem;
+  }
+
+  .picks1, .picks2 {
+    font-size: 1rem;
+  }
+}
+
+
+/* ✨✨✨✨ */
+
+/* @media only screen and (max-width: 1024px) {
+
+} */
+
+
+/* ✨✨✨✨ */
+
+/* @media only screen and (max-width: 480px) {
+  .wrapper {
+    padding: 10px;
+  }
+
+} */
+
