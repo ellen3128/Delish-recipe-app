@@ -33,7 +33,6 @@ input::-webkit-inner-spin-button {
 
 .mealPlanbtn {
   padding: 0.8rem 2rem;
-
   background-color: rgb(138, 163, 138);
   color: white;
   border: none;
@@ -118,4 +117,29 @@ article a {
 }
 .instructions li {
   margin-top: -1px !important;
+}
+
+@media only screen and (max-width: 480px) {
+  .input-field {
+    margin: 5rem;
+    padding-right: 1rem;
+  }
+
+  input {
+    font-size: 0.85rem;
+    color: white;
+    border-radius: 1rem;
+    outline: none;
+  }
+
+  .controls {
+    width: 210px;
+  }
+
+  .mealPlanbtn {
+    padding: 0.5rem 0.5rem;
+    font-size: 15px;
+    width: 90%;
+    border-radius: 5px;
+  }
 }
