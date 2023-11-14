@@ -177,10 +177,16 @@
     transform: scale(1.1);
   }
   
+  .bannerContainer {
+    height: 150px;
+    background: linear-gradient(to right, #00473d, #00473d);
+  }
+
   .bannerImg {
-    width: 50%;
-    height: auto;
-    margin-left: 15px;
+    width: 55%;
+    height: 150px;
+    margin-left: 10px;
+    /* margin-top: 15px; */
   }
 
   .text p {
@@ -188,7 +194,7 @@
     color: #e6ff55;
     font-size: 22px;
     line-height: 27px;
-    margin-top: 40px;
+    margin-top: 45px;
     text-align: left;
     margin-left: 100px;
   }
