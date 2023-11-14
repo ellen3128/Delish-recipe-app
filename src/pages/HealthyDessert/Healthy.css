@@ -81,6 +81,7 @@
   .grid-container {
     grid-template-columns: repeat(2, 1fr) !important; 
     max-width: 100%; 
+    padding-right: 1rem;
   }
 
   .healthy-image {
