@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
@@ -6,6 +7,30 @@ import { Link } from "react-router-dom";
 
 export default function Popular() {
   const [popular, setPopular] = useState([]);
+  const [splideOptions, setSplideOptions] = useState({
+    fixedWidth: "270px",
+    fixedHeight: "400px",
+    arrows: false,
+    pagination: false,
+    drag: "free",
+    gap: "4rem",
+    width: "90vw",
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 480) {
+        setSplideOptions(prevOptions => ({ ...prevOptions, gap: "-3rem" }));
+      } else {
+        setSplideOptions(prevOptions => ({ ...prevOptions, gap: "4rem" }));
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize(); // Initialize with the correct gap
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     getPopular();
@@ -47,17 +72,7 @@ export default function Popular() {
           <h3 className="picks1">Our Picks</h3>
         </div>
         <div className="grid-rows-1">
-          <Splide
-            options={{
-              fixedWidth: "270px",
-              fixedHeight: "400px",
-              arrows: false,
-              pagination: false,
-              drag: "free",
-              gap: "4rem",
-              width: "90vw",
-            }}
-          >
+          <Splide options={splideOptions}>
             {popular.map((recipe) => {
               return (
                 <SplideSlide key={recipe.id}>

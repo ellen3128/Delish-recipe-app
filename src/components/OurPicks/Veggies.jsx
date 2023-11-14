@@ -6,6 +6,30 @@ import { Link } from "react-router-dom";
 
 export default function Vegies() {
   const [vegies, setVegies] = useState([]);
+  const [splideOptions, setSplideOptions] = useState({
+    fixedWidth: "270px",
+    fixedHeight: "400px",
+    arrows: false,
+    pagination: false,
+    drag: "free",
+    gap: "4rem",
+    width: "90vw",
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 480) {
+        setSplideOptions(prevOptions => ({ ...prevOptions, gap: "-3rem" }));
+      } else {
+        setSplideOptions(prevOptions => ({ ...prevOptions, gap: "4rem" }));
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize(); // Initialize with the correct gap
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     getVegies();
@@ -47,17 +71,7 @@ export default function Vegies() {
           <h3 className="picks2">Veggie Picks</h3>
         </div>
 
-        <Splide
-          options={{
-            fixedWidth: "270px",
-            fixedHeight: "400px",
-            arrows: false,
-            pagination: false,
-            drag: "free",
-            gap: "4rem",
-            width: "90vw",
-          }}
-        >
+        <Splide options={splideOptions}>
           {vegies.map((recipe) => {
             return (
               <SplideSlide key={recipe.id}>
