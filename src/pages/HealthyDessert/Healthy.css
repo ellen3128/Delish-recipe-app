@@ -4,7 +4,6 @@
 
 .grid-container {
   display: grid;
-
   grid-template-columns: 1fr;
   max-width: 90%;
   margin: 2rem auto !important;
@@ -53,24 +52,56 @@
   margin-bottom: 2rem;
 }
 
-@media (min-width: 600px) {
+@media only screen and (max-width: 1024px) {
   .grid-container {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 85%;
+    grid-template-columns: repeat(3, 1fr); 
+    max-width: 95%;
+  }
+
+  .healthy-image {
+    height: 18rem; 
+    border-radius: 15rem; 
+  }
+
+  .classification {
+    font-size: 1.3rem; 
+  }
+
+  .recipeName {
+    font-size: 0.95rem; 
+  }
+
+  .card-healthy, .card-dessert {
+    padding: 0.6rem;
   }
 }
 
-/* Small Desktops: 3 columns */
-@media (min-width: 900px) and (max-width: 1199px) {
+
+@media only screen and (max-width: 480px) {
   .grid-container {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr) !important; 
+    max-width: 100%; 
+  }
+
+  .healthy-image {
+    height: 17rem; 
+    border-radius: 10rem; 
+  }
+
+  .classification {
+    font-size: 1.1rem; 
+    margin-left: 0.4rem;
+    margin-top: 0.8rem;
+    margin-bottom: -0.8rem;
+  }
+
+  .recipeName {
+    font-size: 0.7rem; 
+    line-height: 15px;
+  }
+
+  .card-healthy, .card-dessert {
+    padding: 0.4rem;
   }
 }
 
-/* Regular Desktops: 4 columns */
-@media (min-width: 1200px) {
-  .grid-container {
-    grid-template-columns: repeat(4, 1fr);
-    max-width: 80%;
-  }
-}
