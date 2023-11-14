@@ -78,7 +78,8 @@
 
 @media only screen and (max-width: 480px) {
   .wrapper {
-    padding: 0.5rem;
+    margin-top: -20px;
+    height: 250px;
   }
 
   .random-card {
@@ -90,14 +91,19 @@
   }
 
   .random-title {
-    margin-top: -3.5rem;
+    margin-top: -3.0rem;
     margin-left: 0.5rem;
-    text-align: left;
-    font-size: 0.8rem;
+    text-align: center;
+    font-size: 0.75rem;
+    width: 170px;
+    line-height: 15px;
   }
 
   .picks1, .picks2 {
     font-size: 1rem;
+    margin-left: 10px;
+    margin-bottom: 10px;
+
   }
 }
 
