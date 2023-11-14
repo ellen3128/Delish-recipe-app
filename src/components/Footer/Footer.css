@@ -1,0 +1,16 @@
+.footer {
+    background-color: #00483E;
+    color: #F4F3E7;
+    text-align: center;
+    padding: 2rem;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    border-top: 1px solid #808080;
+  }
+
+  @media only screen and (max-width: 480px) {
+    .footer {
+        margin-top: 125px;
+        font-size: 0.8rem;
+    }
+  }

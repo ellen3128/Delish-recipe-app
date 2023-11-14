@@ -29,7 +29,7 @@
 
 @media only screen and (max-width: 480px) {
   .searchForm {
-    width: 70%;
+    width: 80%;
   }
 
   .searchInput {
@@ -37,6 +37,6 @@
   }
 
   .searchIcon {
-    padding-bottom: 3px;
+    padding-bottom: 4px;
   }
 } 
