@@ -189,6 +189,8 @@ article a {
   
   .instructions li {
     margin-top: -1px !important;
+    line-height: 20px;
+    font-size: 14px;
   }
-  
+
 }
