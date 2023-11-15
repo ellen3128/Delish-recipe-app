@@ -30,6 +30,7 @@
 @media only screen and (max-width: 480px) {
   .searchForm {
     width: 80%;
+    margin-right: 2.8rem;
   }
 
   .searchInput {
