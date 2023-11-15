@@ -193,4 +193,12 @@ article a {
     font-size: 14px;
   }
 
+  article a {
+    font-weight: 800;
+    background-color: aqua;
+    padding: 0.5rem 2rem;
+    margin-left: 0px;
+    text-align: center;
+  }
+
 }
