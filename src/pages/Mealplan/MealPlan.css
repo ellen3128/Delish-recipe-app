@@ -116,6 +116,7 @@ article a {
 .instructions {
   margin-top: 0rem;
 }
+
 .instructions li {
   margin-top: -1px !important;
 }
@@ -161,4 +162,16 @@ article a {
   .macroData {
     font-size: 14px;
   }
+
+  .meals {
+    display: block;
+  }
+  
+  article h1 {
+    font-size: 14px;
+    margin-top: 20px;
+    margin-left: 3rem;
+    width: 380px;
+  }
+
 }
