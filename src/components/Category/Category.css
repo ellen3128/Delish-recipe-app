@@ -71,6 +71,8 @@
   .slink {
     width: 5.3rem;
     height: 5.2rem;
+    justify-content: center;
+    align-items: center;
   }
 
   .category-icon {
