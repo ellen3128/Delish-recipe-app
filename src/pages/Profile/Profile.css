@@ -50,3 +50,26 @@
   color: #00473d;
   font-weight: 750;
 }
+
+@media only screen and (max-width: 480px) {
+   .userpic {
+    width: 30%;
+    height: auto;
+   }
+
+   .userName {
+    font-size: 20px;
+   }
+
+   .favorites {
+    text-align: left;
+    font-size: 1rem;
+    margin: 20px;
+  }
+  
+  .favorite-title {
+    text-align: left;
+    margin-left: 0px;
+    padding: 50px;
+  }
+}
