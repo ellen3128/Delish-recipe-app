@@ -57,8 +57,8 @@
     height: auto;
    }
 
-   .userName {
-    font-size: 20px;
+   .username {
+    margin-right: 15px;
    }
 
    .favorites {
