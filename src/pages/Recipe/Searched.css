@@ -46,6 +46,21 @@
 }
 
 /* Tablets: 2 columns */
+
+@media (min-width: 350px) {
+  .classification { 
+    font-size: 20px;
+    margin-left: 40px;
+  }
+  .searchedImg {
+    border-radius: 50px;
+    height: 23rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+  }
+}
+
+
 @media (min-width: 600px) {
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
