@@ -138,10 +138,22 @@ ol {
   }
 
   li {
-    margin-left: 50px;
+    margin-left: 40px;
     margin-top: 20px;
     text-align: left;
     line-height: 23px;
     font-size: 13px;
   }
+
+  .recipeIngredients li {
+    width: 120%;
+    line-height: 10px;
+    margin-left: 15px;
+    font-size: 12px;
+  }
+
+  .recipeIngredients {
+    padding-bottom: 1.5rem;
+  }
+
 }

@@ -77,7 +77,7 @@ function Recipe() {
           </button>
 
           <button
-            className={activeTab === "ingredients" ? "active" : ""}
+            className={`${activeTab === "ingredients" ? "active" : ""} ingredients`}
             onClick={() => setActiveTab("ingredients")}
           >
             Ingredients
@@ -95,7 +95,7 @@ function Recipe() {
             </div>
           )}
           {activeTab === "ingredients" && (
-            <ul className="contents">
+            <ul className="recipeIngredients">
               {details.extendedIngredients.map((ingredient) => (
                 <li key={ingredient.id}>{ingredient.original}</li>
               ))}
