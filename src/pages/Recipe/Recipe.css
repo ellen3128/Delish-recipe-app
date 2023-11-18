@@ -103,10 +103,10 @@ ol {
   }
   
   .recipe-title {
-    font-size: 1.2rem;
-    padding: 1rem;
+    font-size: 1.3rem;
+    padding: 1.5rem;
     margin-left: 1rem;
-    margin-bottom: 0px;
+    margin-bottom: -20px;
   }
 
   .image-container {
@@ -116,5 +116,32 @@ ol {
   .recipe-image {
     min-width: 20rem;
     padding: 1rem; 
+  }
+
+  button {
+    margin: 2px !important;
+    padding: 0.2rem 1rem;
+  }
+
+  .contents {
+    margin: 10px;
+    padding-top: 1rem;
+    padding-left: 10px;
+  }
+
+  .summary {
+    margin: 0 -1rem;
+    margin-right: 0px;
+    width: 75vw;
+    text-align: left;
+    font-size: 15px;
+  }
+
+  li {
+    margin-left: 50px;
+    margin-top: 20px;
+    text-align: left;
+    line-height: 23px;
+    font-size: 13px;
   }
 }

@@ -60,7 +60,6 @@
   }
 }
 
-
 @media (min-width: 600px) {
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
