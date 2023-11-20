@@ -5,9 +5,8 @@
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
-  max-width: 90%;
   margin: 2rem auto !important;
-  justify-content: center;
+  gap: 3rem;
 }
 
 .healthy-image {
@@ -56,11 +55,13 @@
   .grid-container {
     grid-template-columns: repeat(3, 1fr); 
     max-width: 95%;
+
   }
 
   .healthy-image {
-    height: 18rem; 
+    height: 25rem; 
     border-radius: 15rem; 
+    margin: 0
   }
 
   .classification {
@@ -69,6 +70,9 @@
 
   .recipeName {
     font-size: 0.95rem; 
+    padding-top: 1rem;
+    text-align: center;
+    margin-left: 30px;
   }
 
   .card-healthy, .card-dessert {
@@ -81,12 +85,13 @@
   .grid-container {
     grid-template-columns: repeat(2, 1fr) !important; 
     max-width: 100%; 
-    padding-right: 1rem;
+    gap: 20px;
   }
 
   .healthy-image {
     height: 17rem; 
-    border-radius: 10rem; 
+    border-radius: 5rem; 
+    margin-bottom: 0px;
   }
 
   .classification {
@@ -99,10 +104,11 @@
   .recipeName {
     font-size: 0.7rem; 
     line-height: 15px;
+    margin-bottom: 0px !important;
   }
 
   .card-healthy, .card-dessert {
-    padding: 0.4rem;
+    padding: 0.5rem;
   }
 }
 

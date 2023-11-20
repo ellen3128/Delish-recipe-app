@@ -155,5 +155,9 @@ ol {
   .recipeIngredients {
     padding-bottom: 1.5rem;
   }
-
+  .favorited {
+    color: red;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 }
